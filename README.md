@@ -1,14 +1,26 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+<<<<<<< HEAD
 Welcome Holly Williams,
+=======
+# Welcome to Battleships! 
+Here you will experience a simple game of battleships, using python, and stored in a run.py. 
+The game will consist of a a greeting and then ask for the name of player. There after there will be a board, with 5 rows and 5 columns.
+The general rules of battleships apply, hit all your opponents ships, before they hit yours.
+This game will generate a random guess from the computer. 
+The game will restart when there is a winner. You can continue, another game thereafter.
+>>>>>>> 8c3a9cfeebb59b6182a6e515754601c38303573a
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## The Board
 
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
+* 5 rows, 5 colums, no way of clicking out of the board.
+*
 * Do not edit any of the other files or your code may not deploy properly
+
+
+
+
+## The Boats
 
 ## Creating the Heroku app
 
