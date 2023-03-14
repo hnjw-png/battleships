@@ -23,7 +23,7 @@ x = input()
 print("Hello, lets play Battleships!" + x)
 
 #setting board rows and columns
-class Board:
+class board:
    def __init__(self, size, num_ships):
     self.size = size
     self.board = board
@@ -40,10 +40,14 @@ board(size) = []
 for o in range(5):
     board.append(["0"] * 5 )
 
-def print_board(board):
+def board(board):
     for row in board:
-        print " ".join(row)
+        print(" ".join(row))
 
+def print_board(board):
+        print(" ", " ".join("12345"))
+        for letter, row in zip("ABCDE", Board):
+            print(letter, " ".join(row))
 
 print_board(board)
 
@@ -71,18 +75,18 @@ for i in range(6):
 shipone_won = False
 shiptwo_won = False
 
-For turn in range (6):
+for turn in range(6):
 
 #receive the players guess
 
-    print "Round #" + str ((turn + 1))
+    print ("Round #" + str (turn + 1))
     guess_row = int(input("Guess Row:"))
     guess_col = int(input("Guess Col:"))
 
 #this will check if the is users guesses match ships
 
     if (guess_row == shipone_row and guess_col == shipone_col and shipone_won == False):
-        print "You have taken one ship, one  to go!"
+        print("You have taken one ship, one  to go!")
         shipone_won = True
 
     #set the space to x, so we know where the last boat was hit
@@ -90,15 +94,15 @@ For turn in range (6):
         board[guess_col][guess_row] = "x"
 
         if shipone_won and shiptwo_won == True:
-        print "Congratulations, you have taken down both ships"
-        break
+            print("Congratulations, you have taken down both ships")
+            break
 
 
     elif(guess_row == shiptwo_row and guess_col == shiptwo_col and shiptwo_won == False):
-        print "Congrats! You have taken down one ship"
+        print("Congrats! You have taken down one ship")
         board[guess_row][guess_col] = "x"
         if shiptwo_won == True and shiptwo_won == True:
-            print "Congrats, You have taken down both ships!"
+            print("Congrats, You have taken down both ships!")
 
 
     else:
