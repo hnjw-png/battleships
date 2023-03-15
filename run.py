@@ -81,7 +81,7 @@ for turn in range(6):
         if turn == 5:
             print("You did not sink all the battleships, GAME OVER!")
 
-        if 
+        elif(guess_row == )
 
        
 
