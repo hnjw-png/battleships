@@ -75,11 +75,13 @@ for turn in range(6):
         board[guess_row][guess_col] = "p"
         if shiptwo_won == True and shiptwo_won == True:
             print("Congrats, You have taken down both ships!")
+            restart()
 
 
     else:
         if turn == 5:
             print("You did not sink all the battleships, GAME OVER!")
+            restart()
 
         elif(guess_row == )
 
