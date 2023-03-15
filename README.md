@@ -38,7 +38,28 @@ The game will restart when there is a winner. You can continue, another game the
 
 * This game was a great learning curve for me, as I have spend much time expereimenting with different ways of creating the game, ship placement and score collecting. In the end I decided on a simplier version of battleships, which better served its purpose. 
 
-* I would have have numbered and lettered coordinates for my board like this: 
+* I would have have numbered and lettered coordinates for my board something like this: 
+ assign letters and numbers to board
+    def print_board(Board):
+        print(" ", " ".join("12345"))
+        for letter, row in zip("ABCDE", Board):
+            print(letter, " ".join(row))
+
+* I would have more ships, which could look something like this: 
+class Ship: 
+    def__init__(self, col, row):
+    self.col = col
+    self.row = row
+    
+    num_of_ships = 4
+    ships = []
+    for i in range (num_of_ships)
+    ships.append(ship)
+    
+  * I would have a more appealing visuals, this could work by chnaging colors when you hit or miss.
+  * Another improvement would be to make sure the boards appears appended with each guess after each round. This is a in progress of being researched, and a examply code will come:...
+
+* use classes instead of only def, this would make the code more functional and object orientated.
 
 ## Creating the Heroku app
 
