@@ -51,14 +51,14 @@ for turn in range(6):
 
 # receive the players guess
 
-    print("Round #" + str (turn + 1))
+    print("Round #" + str(turn + 1))
     guess_row = int(input("Guess Row:"))
     guess_col = int(input("Guess Col:"))
 
 # this will check if the is users guesses match ships
 
     if (guess_row == shipone_row and guess_col == shipone_col and shipone_won == False):
-        print("You have taken one ship, one  to go!")
+        print("You have taken one ship, one to go!")
         shipone_won = True
 
     # set the space to p, so we know where the last boat was hit
@@ -70,8 +70,8 @@ for turn in range(6):
             break
 
 
-    elif(guess_row = shiptwo_row and guess_col == shiptwo_col and shiptwo_won == False):
-        print("Congrats! You have taken down one ship")
+        elif(guess_row == shiptwo_row and guess_col == shiptwo_col and shiptwo_won == False):
+            print("Congrats! You have taken down one ship")
         board[guess_row][guess_col] = "p"
         if shiptwo_won == True and shiptwo_won == True:
             print("Congrats, You have taken down both ships!")
@@ -81,8 +81,9 @@ for turn in range(6):
         if turn == 5:
             print("You did not sink all the battleships, GAME OVER!")
 
-        elif (guess_row > shipone_row or )
+        if 
 
+       
 
 
 
