@@ -29,6 +29,7 @@ The game will restart when there is a winner. You can continue, another game the
 
 * You will be prompted that you have clicked outside the board and asked to make another guess.
 * You will be informed if you guess correctly.
+* There are 2 ships to be found.
 
 ## You didnt sink the ships
 
@@ -45,7 +46,7 @@ The game will restart when there is a winner. You can continue, another game the
         for letter, row in zip("ABCDE", Board):
             print(letter, " ".join(row))
 
-* I would have more ships, which could look something like this: 
+* I would have more ships, which could look something like this, right now I have written the code in a simplier way to create two ships. But below you will see the sort of code I could use to add many, and to keep the code much more functional and practical: 
 class Ship: 
     def__init__(self, col, row):
     self.col = col
@@ -61,6 +62,21 @@ class Ship:
 
 * use classes instead of only def, this would make the code more functional and object orientated.
 
+
+## Testing
+
+* Currently the board appears without problem in the console, the prompts work properly as well. 
+* The next debug I am doing is to see why you do not see when you have hit and miss. 
+* I am creating a piece of code to restart game, right now it looks like this:
+while True:
+        game()
+        restart = input('Do you want to restart Yes please/No thanks?')
+        if restart == 'N'
+            break
+        elif restart == 'Y':
+            continue
+  
+ * 
 ## Creating the Heroku app
 
 When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
