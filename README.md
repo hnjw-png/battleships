@@ -82,11 +82,12 @@ The game will restart when there is a winner. You can continue, another game the
 ![image](https://user-images.githubusercontent.com/120515252/225860805-139c1964-2d5f-4a05-a815-2be681671ad6.png)
 
 
-# Improvements.
+# Improvements
 
 * This game was a great learning curve for me, as I have spend much time experimenting with different ways of creating the game, ship placement and score collecting. In the end I decided on a simplier version of battleships, which better served my purpose. 
 
 * I would have have numbered and lettered coordinates for my board something like this: 
+
  assign letters and numbers to board
     def print_board(Board):
         print(" ", " ".join("12345"))
@@ -94,6 +95,7 @@ The game will restart when there is a winner. You can continue, another game the
             print(letter, " ".join(row))
 
 * I would have more ships, which could look something like this, right now I have written the code in a simplier way to create two ships. But below you will see the sort of code I could use to add many, and to keep the code much more functional and practical: 
+
 class Ship: 
     def__init__(self, col, row):
     self.col = col
@@ -104,7 +106,8 @@ class Ship:
     for i in range (num_of_ships)
     ships.append(ship)
     
-  * I would have a more appealing visuals, this could work by chnaging colors when you hit or miss.
+  * I would have a more appealing visuals, this could work by changing colors when you hit or miss.
+  
   * Another improvement would be to make sure the boards appears appended with each guess after each round. This is a in progress of being researched, and a example code will come:...
   
 
@@ -114,8 +117,12 @@ class Ship:
 ## Testing
 
 * Currently the board appears without problem in the console, the prompts work properly as well. 
+
 * The next debug I am doing is to see why you do not see when you have hit and miss. 
+
 * I am creating a piece of code to restart game, right now it looks like this:
+
+
 while True:
         game()
         restart = input('Do you want to restart Yes please/No thanks?')
@@ -124,14 +131,16 @@ while True:
         elif restart == 'Y':
             continue
   
+  
  * Right now, I had to remove the function that stops you from clicking outside the board as it was causing a error, my idea for improving the project is the following code:
 
 
 ![image](https://user-images.githubusercontent.com/120515252/225852315-c3190bfa-6b60-4194-bb73-0db62f09caff.png)
 
-The fact that the game doesnt tell you if you have clicked outside the board, although theres no error, its not clear if you pickign a coordinate or not, so a improvement would be to make the game more playable and understandable.
+* The fact that the game doesnt tell you if you have clicked outside the board, although theres no error, its not clear if you pickign a coordinate or not, so a improvement would be to make the game more playable and understandable.
 
 * A second error that has occured is that you are not told per guess if you have hit or miss, the code only runs 5times and then tells you if you won or not.
+
 
 ![image](https://user-images.githubusercontent.com/120515252/225856381-bd7d4f95-01a0-481c-b057-de07e82d933b.png)
 
