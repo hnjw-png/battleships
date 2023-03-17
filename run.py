@@ -4,7 +4,7 @@ from random import randint
 print("Enter your name:")
 x = input()
 print("Hello, lets play Battleships " + x)
-print(score = 0)
+print("score = 0")
 
 board = []
 
