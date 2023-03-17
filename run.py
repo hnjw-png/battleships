@@ -1,6 +1,7 @@
 from random import randint
 
 # hello message to player
+print("Welcome to Battleships, this is a one player game. You have 5 turns, and guesses must be between 0-5")
 print("Enter your name:")
 x = input()
 print("Hello, lets play Battleships " + x)
