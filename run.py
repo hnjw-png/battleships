@@ -4,7 +4,7 @@ from random import randint
 print("Enter your name:")
 x = input()
 print("Hello, lets play Battleships " + x)
-
+print(score = 0)
 
 board = []
 
@@ -74,6 +74,7 @@ for turn in range(6):
         board[guess_row][guess_col] = "p"
         if shiptwo_won == True and shiptwo_won == True:
             print("Congrats, You have taken down both ships!")
+            print("score: you win!!")
             break
 
 
@@ -81,8 +82,3 @@ for turn in range(6):
         if turn == 5:
             print("You did not sink all the battleships, GAME OVER!")
             break
-
-        elif:
-            (guess_col < 0 or guess_col > 5) or (guess_row < 0 or guess_row > 5):
-                print("Oh no! You did not choose a valid number!")
-                break
