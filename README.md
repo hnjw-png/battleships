@@ -1,25 +1,36 @@
 
 # Welcome to Battleships! 
+
+## Instructionsand information: 
+
 Here you will experience a simple game of battleships, using python, and stored in a run.py. 
 The game will consist of a a greeting and then ask for the name of player. There after there will be a board, with 5 rows and 5 columns.
-The general rules of battleships apply, hit all your opponents ships, before they hit yours.
-This game will generate a random guess from the computer. 
-The game will restart when there is a winner. You can continue, another game thereafter.
+The general rules of battleships apply, is to hit both battleships within 5 turns.
+This game will generate a random guess from the computer. This function is not yet in the game, in future I will add the computers random choice too.
+The game will restart when there is a winner. You can continue, another game thereafter. This function is not working, this is something to work out in the future. As the reason is that the function has not been written.
 >>>>>>> 8c3a9cfeebb59b6182a6e515754601c38303573a
 
-## Hello Prompt
+## Instructions and Hello prompt
 
-* To begin the game of battleships, there is will be  message asking you write you name, then the next message will appear saying welcome to battleships + X.
+* Firstly basic instructions will appear on how you should play the game.
+
+* Thereafter there will be a message asking for the players name, and the next message that will appear with be welcome to battleships + the name.
+
+* Then the board appear.
 
 ## The Board
 
 * 5 rows, 5 colums, no way of clicking out of the board.
+* 
 * Here I have created a simplifed version of battleships, the grd is made up of 5 rows and columns. These are made up with 0's.
-* Do not edit any of the other files or your code may not deploy properly
+* 
+* There is one board for one player, that only appears once.
 
 ## The Boats
 
 * There will be two boats in the game, there is a function that picks coordinates randomly, they two more functions representing where the boats will be places at random. 
+
+* Right now you cannot ot see what coordinates you have choose on the board, in future there will be more functionality on the board. As its highly important in the game that you know your hits and misses.
 
 ## The guess row and column prompt
 
@@ -28,12 +39,16 @@ The game will restart when there is a winner. You can continue, another game the
 ## The function that stops you from selecting coordinates outside of the board game.
 
 * You will be prompted that you have clicked outside the board and asked to make another guess.
+* 
 * You will be informed if you guess correctly.
+* 
 * There are 2 ships to be found.
 
 ## You didnt sink the ships
 
 * You have 5 chances to choose correctly, before the game restarts.
+
+* Right now the user has to manually reset the game.
 
 # Improvements.
 
@@ -58,7 +73,8 @@ class Ship:
     ships.append(ship)
     
   * I would have a more appealing visuals, this could work by chnaging colors when you hit or miss.
-  * Another improvement would be to make sure the boards appears appended with each guess after each round. This is a in progress of being researched, and a examply code will come:...
+  * Another improvement would be to make sure the boards appears appended with each guess after each round. This is a in progress of being researched, and a example code will come:...
+  
 
 * use classes instead of only def, this would make the code more functional and object orientated.
 
@@ -77,20 +93,31 @@ while True:
             continue
   
  * Right now, I had to remove the function that stops you from clicking outside the board as it was causing a error, my idea for improving the project is the following code:
+
+
 ![image](https://user-images.githubusercontent.com/120515252/225852315-c3190bfa-6b60-4194-bb73-0db62f09caff.png)
 
-## Creating the Heroku app
+The fact that the game doesnt tell you if you have clicked outside the board, although theres no error, its not clear if you pickign a coordinate or not, so a improvement would be to make the game more playable and understandable.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+* A second error that has occured is that you are not told per guess if you have hit or miss, the code only runs 5times and then tells you if you won or not.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+![image](https://user-images.githubusercontent.com/120515252/225856381-bd7d4f95-01a0-481c-b057-de07e82d933b.png)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+* In a way to improve more, I would create a opposing player(the computer) and a two boards to show where you have hit, because right now its a one player game.
 
-Connect your GitHub repository and deploy as normal.
+* Another improvement would be to create a scoring system. This be could be by appending the score every time the player loses or wins.
+
+* Right now the game does not restart without being maually refreshed this is something I would look to improve further in this game, as in terms of usability its not ideal for the use to press the refrest button themselves.
+
+* The game itself serves its purpoae, but does not have a higher gain, nothing that is going to make you stay. I would like to make it more interactive, by shwing the board everytime the user picks a coordinate. And work on the function that shows where you have already guessed.
+* 
+## Python Validator
+
+* Unfortunately my code did not pass the validator test, there was some small errors such as too many blank lines. In the future, I edit the code to have no errors and to be honest, be a little more complicated. As someone who has picked up python for the first time, it had its own set of challenges, adn required a lot of additional homework, to understand how to actually create a game.
+* 
+![image](https://user-images.githubusercontent.com/120515252/225858387-f2bbc016-84a8-48cf-bc7a-a2594c48463b.png)
+
 
 ## Constraints
 
