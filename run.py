@@ -5,7 +5,7 @@ print("Welcome to Battleships, this is a one player game. You have 5 turns, and 
 print("Enter your name:")
 x = input()
 print("Hello, lets play Battleships " + x)
-print("score = 0")
+
 
 board = []
 
@@ -75,7 +75,6 @@ for turn in range(6):
         board[guess_row][guess_col] = "p"
         if shiptwo_won == True and shiptwo_won == True:
             print("Congrats, You have taken down both ships!")
-            print("score: you win!!")
             break
 
 
