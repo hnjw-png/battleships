@@ -67,6 +67,9 @@ The game will restart when there is a winner. You can continue, another game the
 
 * Right now the user has to manually reset the game.
 
+![image](https://user-images.githubusercontent.com/120515252/225862519-5b3e23ff-9088-4e80-bfab-d4d318586bc0.png)
+
+
 ## Automatic error is a letter is typed of instead of a number
 
 * You will get a error message if you choose anything other than a number.
