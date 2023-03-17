@@ -4,7 +4,7 @@
 ## Instructions and information: 
 
 Here you will experience a simple game of battleships, using python, and stored in a run.py. 
-The game will consist of a a greeting and then ask for the name of player. There after there will be a board, with 5 rows and 5 columns.
+The game will consist of a instructions and then ask for the name of player. There after there will be a board, with 5 rows and 5 columns.
 The general rules of battleships apply, is to hit both battleships within 5 turns.
 This game will generate a random guess from the computer. This function is not yet in the game, in future I will add the computers random choice too.
 The game will restart when there is a winner. You can continue, another game thereafter. This function is not working, this is something to work out in the future. As the reason is that the function has not been written.
