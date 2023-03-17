@@ -1,7 +1,7 @@
 
 # Welcome to Battleships! 
 
-## Instructionsand information: 
+## Instructions and information: 
 
 Here you will experience a simple game of battleships, using python, and stored in a run.py. 
 The game will consist of a a greeting and then ask for the name of player. There after there will be a board, with 5 rows and 5 columns.
@@ -16,15 +16,21 @@ The game will restart when there is a winner. You can continue, another game the
 
 * Thereafter there will be a message asking for the players name, and the next message that will appear with be welcome to battleships + the name.
 
-* Then the board appear.
+* Then the board appears.
+
+![image](https://user-images.githubusercontent.com/120515252/225860245-90a3c24a-c81f-4340-9d25-a51c178d3477.png)
+
 
 ## The Board
 
 * 5 rows, 5 colums, no way of clicking out of the board.
-* 
+
 * Here I have created a simplifed version of battleships, the grd is made up of 5 rows and columns. These are made up with 0's.
-* 
+
 * There is one board for one player, that only appears once.
+
+![image](https://user-images.githubusercontent.com/120515252/225860328-72cf9411-0a38-49e4-b541-003abe4534d3.png)
+
 
 ## The Boats
 
@@ -32,16 +38,22 @@ The game will restart when there is a winner. You can continue, another game the
 
 * Right now you cannot ot see what coordinates you have choose on the board, in future there will be more functionality on the board. As its highly important in the game that you know your hits and misses.
 
+![image](https://user-images.githubusercontent.com/120515252/225860406-5b6cc5ec-a4f7-4088-a7fc-9844e2c9ee0b.png)
+
+
 ## The guess row and column prompt
 
 * After each go, there will be a automatic prompt to ask for your guess, you will have 5 chances to guess correctly.
 
+![image](https://user-images.githubusercontent.com/120515252/225860545-07a36593-08bd-4494-94c5-3d50f8665700.png)
+
+
 ## The function that stops you from selecting coordinates outside of the board game.
 
 * You will be prompted that you have clicked outside the board and asked to make another guess.
-* 
+
 * You will be informed if you guess correctly.
-* 
+
 * There are 2 ships to be found.
 
 ## You didnt sink the ships
@@ -49,6 +61,15 @@ The game will restart when there is a winner. You can continue, another game the
 * You have 5 chances to choose correctly, before the game restarts.
 
 * Right now the user has to manually reset the game.
+
+## Automatic error is a letter is typed of instead of a number
+
+* You will get a error message if you choose anything other than a number.
+
+* Right now the error message works but it stops the whole game this is something to fix in the future. As this seriously effects the use experience.
+
+![image](https://user-images.githubusercontent.com/120515252/225860805-139c1964-2d5f-4a05-a815-2be681671ad6.png)
+
 
 # Improvements.
 
