@@ -40,6 +40,11 @@ The game will restart when there is a winner. You can continue, another game the
 
 ![image](https://user-images.githubusercontent.com/120515252/225860406-5b6cc5ec-a4f7-4088-a7fc-9844e2c9ee0b.png)
 
+* Here I have attempted to add p as the mark for when you have hit a boat, but right now it does not seem to function. This could be because I have not yet guessed correctly. See below the code that should make this happen:
+
+![image](https://user-images.githubusercontent.com/120515252/225862235-831bd94f-c02f-4722-bbd6-4462a372f8e3.png)
+
+
 
 ## The guess row and column prompt
 
