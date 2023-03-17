@@ -37,7 +37,7 @@ The game will restart when there is a winner. You can continue, another game the
 
 # Improvements.
 
-* This game was a great learning curve for me, as I have spend much time expereimenting with different ways of creating the game, ship placement and score collecting. In the end I decided on a simplier version of battleships, which better served its purpose. 
+* This game was a great learning curve for me, as I have spend much time experimenting with different ways of creating the game, ship placement and score collecting. In the end I decided on a simplier version of battleships, which better served my purpose. 
 
 * I would have have numbered and lettered coordinates for my board something like this: 
  assign letters and numbers to board
@@ -76,7 +76,9 @@ while True:
         elif restart == 'Y':
             continue
   
- * 
+ * Right now, I had to remove the function that stops you from clicking outside the board as it was causing a error, my idea for improving the project is the following code:
+![image](https://user-images.githubusercontent.com/120515252/225852315-c3190bfa-6b60-4194-bb73-0db62f09caff.png)
+
 ## Creating the Heroku app
 
 When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
