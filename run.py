@@ -82,7 +82,7 @@ for turn in range(6):
             print("You did not sink all the battleships, GAME OVER!")
             break
 
-    elif:
-        (guess_col < 0 or guess_col > 5) or (guess_row < 0 or guess_row > 5):
-        print("Oh no! You did not choose a valid number!")
-        break
+        elif:
+            (guess_col < 0 or guess_col > 5) or (guess_row < 0 or guess_row > 5):
+                print("Oh no! You did not choose a valid number!")
+                break
