@@ -159,6 +159,13 @@ while True:
 * 
 ![image](https://user-images.githubusercontent.com/120515252/225858387-f2bbc016-84a8-48cf-bc7a-a2594c48463b.png)
 
+## Object orientation
+
+* The board is the object in this game, it can be resued throughout the game.
+
+* To improve further, I would create boats as objects too.
+
+* Due to simpilicity of the game, there is much room for more object orientated programming, by the use of classes instead of just using def.
 
 ## Deployment
 
@@ -178,6 +185,9 @@ while True:
 
 * It can also work to select deploy branch automatically, this will update everytime you commit you editted repository to github.
 
+## Credits
 
------
+* w3schools for help understanding game creation.
+
+* code institute for study material
 Happy Playing!
