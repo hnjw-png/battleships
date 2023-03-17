@@ -8,7 +8,10 @@ The game will consist of a a greeting and then ask for the name of player. There
 The general rules of battleships apply, is to hit both battleships within 5 turns.
 This game will generate a random guess from the computer. This function is not yet in the game, in future I will add the computers random choice too.
 The game will restart when there is a winner. You can continue, another game thereafter. This function is not working, this is something to work out in the future. As the reason is that the function has not been written.
->>>>>>> 8c3a9cfeebb59b6182a6e515754601c38303573a
+
+## Responsiveness
+
+![image](https://user-images.githubusercontent.com/120515252/225863736-7eeb4dfc-10d8-4a41-82c6-df6aafeb60b2.png)
 
 ## Instructions and Hello prompt
 
