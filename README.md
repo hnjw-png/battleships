@@ -111,7 +111,7 @@ class Ship:
   * Another improvement would be to make sure the boards appears appended with each guess after each round. This is a in progress of being researched, and a example code will come:...
   
 
-* use classes instead of only def, this would make the code more functional and object orientated.
+* Use classes instead of only def, this would make the code more functional and object orientated.
 
 
 ## Testing
@@ -137,7 +137,7 @@ while True:
 
 ![image](https://user-images.githubusercontent.com/120515252/225852315-c3190bfa-6b60-4194-bb73-0db62f09caff.png)
 
-* The fact that the game doesnt tell you if you have clicked outside the board, although theres no error, its not clear if you pickign a coordinate or not, so a improvement would be to make the game more playable and understandable.
+* The fact that the game doesn't tell you if you have clicked outside the board, although theres no error, its not clear if you pickign a coordinate or not, so a improvement would be to make the game more playable and understandable.
 
 * A second error that has occured is that you are not told per guess if you have hit or miss, the code only runs 5times and then tells you if you won or not.
 
