@@ -39,7 +39,7 @@ The game will restart when there is a winner. You can continue, another game the
 
 * There will be two boats in the game, there is a function that picks coordinates randomly, they two more functions representing where the boats will be places at random. 
 
-* Right now you cannot ot see what coordinates you have choose on the board, in future there will be more functionality on the board. As its highly important in the game that you know your hits and misses.
+* Right now you cannot see what coordinates you have choose on the board, in future there will be visible on the board. As its highly important in the game that you know your hits and misses.
 
 ![image](https://user-images.githubusercontent.com/120515252/225860406-5b6cc5ec-a4f7-4088-a7fc-9844e2c9ee0b.png)
 
