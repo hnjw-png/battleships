@@ -51,7 +51,9 @@ The game will restart when there is a winner. You can continue, another game the
 
 ## The guess row and column prompt
 
-* After each go, there will be a automatic prompt to ask for your guess, you will have 5 chances to guess correctly.
+* After each go, there will be a automatic prompt to ask for your guess, you will have 5 chances to guess correctly. 
+
+* Right now, instead of 5 turns, you get 6 turns. I future, this will not happen.
 
 ![image](https://user-images.githubusercontent.com/120515252/225860545-07a36593-08bd-4494-94c5-3d50f8665700.png)
 
