@@ -140,10 +140,10 @@ The fact that the game doesnt tell you if you have clicked outside the board, al
 
 * Another improvement would be to create a scoring system. This be could be by appending the score every time the player loses or wins.
 
-* Right now the game does not restart without being maually refreshed this is something I would look to improve further in this game, as in terms of usability its not ideal for the use to press the refrest button themselves.
+* Right now the game does not restart without being manually refreshed, this is something I would look to improve further in this game, as in terms of usability its not ideal for the user to press the refresh button themselves.
 
-* The game itself serves its purpoae, but does not have a higher gain, nothing that is going to make you stay. I would like to make it more interactive, by shwing the board everytime the user picks a coordinate. And work on the function that shows where you have already guessed.
-* 
+* The game itself serves its purpose, but does not have a higher gain, nothing that is going to make you stay. I would like to make it more interactive, by showing the board everytime the user picks a coordinate. And work on the function that shows where you have already guessed.
+
 ## Python Validator
 
 * Unfortunately my code did not pass the validator test, there was some small errors such as too many blank lines. In the future, I edit the code to have no errors and to be honest, be a little more complicated. As someone who has picked up python for the first time, it had its own set of challenges, adn required a lot of additional homework, to understand how to actually create a game.
@@ -151,9 +151,24 @@ The fact that the game doesnt tell you if you have clicked outside the board, al
 ![image](https://user-images.githubusercontent.com/120515252/225858387-f2bbc016-84a8-48cf-bc7a-a2594c48463b.png)
 
 
-## Constraints
+## Deployment
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+* Step one: Go to Heroku and log in.
+
+* Create a new app directly in Heroku, give it a unique name.
+
+* Attach you github repository to your heroku account.
+
+* Go to the tab, deplpy.
+
+* Then choose method, this time its github.
+
+* Then give access to your github repository to heroku.
+
+* Press deploy branch manually.
+
+* It can also work to select deploy branch automatically, this will update everytime you commit you editted repository to github.
+
 
 -----
-Happy coding!
+Happy Playing!
