@@ -12,10 +12,6 @@ class board:
      self.board = board
 
 
-for x in range(5):
-    board.append(["0"] * 5)
-
-
 def print_board(self):
     for row in board:
         print(" ".join(row))
@@ -26,6 +22,16 @@ def print_board(self):
     for row in self.board:
         (row_number, "I" .join(row))
         row_number += 1
+
+
+class Ship:
+    def __init__(self, board):
+        self.board = board
+
+    def make_ships(self):
+        for i in range(5):
+            self.x_row, self.y_row = random.randint(0,6), random,randint(0,6)
+
 
 # randomly find ship coordinates
 def random_row(board):
