@@ -7,13 +7,16 @@ x = input()
 print("Hello, lets play Battleships " + x)
 
 
-board = []
+class board:
+    def __init__(self, board):
+     self.board = board
+
 
 for x in range(5):
     board.append(["0"] * 5)
 
 
-def print_board(board):
+def print_board(self):
     for row in board:
         print(" ".join(row))
 
