@@ -21,8 +21,11 @@ def print_board(self):
         print(" ".join(row))
 
 
-print_board(board)
-
+def print_board(self):
+    row_number = 1
+    for row in self.board:
+        (row_number, "I" .join(row))
+        row_number += 1
 
 # randomly find ship coordinates
 def random_row(board):
