@@ -72,21 +72,21 @@ def RunGame():
         Board.print_board(user_guess_board)
         user_x_row, user_y_column = Ship.get_user_input(object)
         while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board:
-         board[user_x_row][user_x_row] == "p":
-           print("You have already chose this spot, please pick another")
-           user_x_row, user_y_column == Ship.get_user_input(object)
+         board[user_x_row][user_x_row] == "p"
+         print("You have already chose this spot, please pick another")
+         user_x_row, user_y_column == Ship.get_user_input(object)
         if computer_board.board[user_x_row][user_y_column] == "p" :
             print("You managed to find one of my ships, what a hit!")
             user_guess_board.board[user_x_row][user_y_column] = "p"
         else:
             print("You did not find my ship!")
             user_guess_board.board[user_x_row][user_y_column] = "-"
-        if Ship.count_found_ships(user_guess_board) == "5"
+        if Ship.count_found_ships(user_guess_board) == "5" :
            print("Well done you managed to find all the ships!")
            break
         else:
             turns -= 1
-            print(f"You got this many guesss {turns}" left, Good Luck!):
+            print(f"You got this many guesss {turns} left, Good Luck!") :
             if turns == 0:
                 print("Oh looks like you sunk all you can today, you are out of turns")
                 Board.print_board(user_guess_board)
