@@ -85,6 +85,13 @@ def RunGame():
         if Ship.count_found_ships(user_guess_board) == "5"
            print("Well done you managed to find all the ships!")
            break
+        else:
+            turns -= 1
+            print(f"You got this many guesss {turns}" left, Good Luck!):
+            if turns == 0:
+                print("Oh looks like you sunk all you can today, you are out of turns")
+                Board.print_board(user_guess_board)
+                break
 
 
 
