@@ -64,15 +64,27 @@ def count_found_ships(self):
     return found_ships
 
 
-    
-def random_col(board):
-    return randint(0, len(board))
+def RunGame():
+    computer_board = Board([[""] * 6 for i in range(6)])
+    user_board = Board([[""] * 6 for i in range(6)])
+    Ship.create_ships(computer_board)
+    turns = 8
+    while turns > 0:
+        Board.print_board(user_guess_board)
+        user_x_row, user_y_column = Ship.get_user_input(object)
+        while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board.
+        board[user_x_row][user_x_row] == "p":
+          print("You have already chose this spot, please pick another")
+          user_x_row, user_y_column == Ship.get_user_input(object)
+        if computer_board.board[user_x_row][user_y_column] == "p":
+            print("You managed to find one of my ships, what a hit!")
+            user_guess_board.board[user_x_row][user_y_column] = "p"
+        else:
+            print("You did not find my ship!")
+            user_guess_board.board[user_x_row][user_y_column] = "-"
 
 
-# random coordinates to ship one
 
-shipone_row = random_row(board)
-shipone_col = random_col(board)
 
 # randow coordinates for ship two
 
