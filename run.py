@@ -82,6 +82,11 @@ def RunGame():
         else:
             print("You did not find my ship!")
             user_guess_board.board[user_x_row][user_y_column] = "-"
+        if Ship.count_found_ships(user_guess_board) == "5"
+           print("Well done you managed to find all the ships!")
+           break
+
+
 
 
 
