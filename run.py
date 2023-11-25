@@ -7,21 +7,21 @@ x = input()
 print("Hello, lets play Battleships " + x)
 
 
-class board:
+class Board:
     def __init__(self, board):
      self.board = board
 
 
-def print_board(self):
-    for row in board:
-        print(" ".join(row))
+    def print_board(self):
+      for row in board:
+         print(" ".join(row))
 
 
-def print_board(self):
-    row_number = 1
-    for row in self.board:
-        (row_number, "I" .join(row))
-        row_number += 1
+    def print_board(self):
+      row_number = 1
+      for row in self.board:
+          (row_number, "I" .join(row))
+          row_number += 1
 
 
 class Ship:
@@ -30,12 +30,39 @@ class Ship:
 
     def make_ships(self):
         for i in range(5):
-            self.x_row, self.y_row = random.randint(0,6), random,randint(0,6)
+            self.x_row, self.y_column = random.randint(0,6), random,randint(0,6)
+            while self.board[self.x_row][self.y_column] == 'P':
+              self.x_row, self.y_column = random.randint(0,6), random,randint(0,6)
+            self.board[self.x_row][self.y_column] == 'P'
+        return self.board
+            
+            
+    def get_user_input(self):
+      try:
+        x_row = input("Type in the Ship row number:")
+        while x_row not in '12345':
+            print("not in the right place, seems you hae sailed away.")
+            x-row = input("Type in row of ship again:")
+
+
+        y_column = input("Type in the Ship column number:")
+        while x_row not in '12345':
+            print("not in the right place, seems you hae sailed away.")
+            x-row = input("Type in column of ship again:")
+        return int(x_row) -1,(y_column) -1
+      except ValueError and KeyError:
+        print("not valid")
+        return self.user_get_input()
 
 
 # randomly find ship coordinates
-def random_row(board):
-    return randint(0, len(board))
+def count_found_ships(self):
+    found_ships = 0
+    for row in self.board:
+        for column in row == 'p':
+            found_ships += 1
+    return found_ships
+
 
     
 def random_col(board):
