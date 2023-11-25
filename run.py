@@ -41,13 +41,13 @@ class Ship:
         x_row = input("Type in the Ship row number:")
         while x_row not in '12345':
             print("not in the right place, seems you hae sailed away.")
-            x-row = input("Type in row of ship again:")
+            x_row = input("Type in row of ship again:")
 
 
         y_column = input("Type in the Ship column number:")
         while x_row not in '12345':
             print("not in the right place, seems you hae sailed away.")
-            x-row = input("Type in column of ship again:")
+            x_row = input("Type in column of ship again:")
         return int(x_row) -1,(y_column) -1
       except ValueError and KeyError:
         print("not valid")
@@ -66,7 +66,7 @@ def count_found_ships(self):
 def RunGame():
     computer_board = Board([[""] * 6 for i in range(6)])
     user_board = Board([[""] * 6 for i in range(6)])
-    Ship.create_ships(computer_board)
+    Ship.make_ships(computer_board)
     turns = 8
     while turns > 0:
         Board.print_board(user_guess_board)
@@ -86,7 +86,7 @@ def RunGame():
            break
         else:
             turns -= 1
-            print(f"You got this many guesss {turns} left, Good Luck!") :
+            print(f"You got this many guesss {turns} left, Good Luck!")
             if turns == 0:
                 print("Oh looks like you sunk all you can today, you are out of turns")
                 Board.print_board(user_guess_board)
