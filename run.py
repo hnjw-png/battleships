@@ -12,16 +12,11 @@ class Board:
     def __init__(self, board):
      self.board = board
 
-
     def print_board(self):
-      for row in board:
-         print(" ".join(row))
-
-
-    def print_board(self):
-      row_number = 1
-      for row in self.board:
-          print("%d| %d|" % (row_number, "|" .join(row)))
+        print(" b a t t l e s h ")
+        row_number = 1
+        for row in self.board:
+          print("%d|%s|" % (row_number, "|".join(row)))
           row_number += 1
 
 
@@ -41,13 +36,13 @@ class Ship:
     def get_user_input(self):
       try:
         x_row = input("Type in the Ship row number:")
-        while x_row not in '12345':
+        while x_row not in '1234567':
             print("not in the right place, seems you hae sailed away.")
             x_row = input("Type in row of ship again:")
 
 
         y_column = input("Type in the Ship column number:")
-        while y_column not in '12345':
+        while y_column not in '1234567':
             print("not in the right place, seems you hae sailed away.")
             y_column = input("Type in column of ship again:")
         return int(x_row) -1,(y_column)
@@ -66,14 +61,14 @@ def count_found_ships(self):
 
 
 def RunGame():
-    computer_board = Board([[""] * 5 for i in range(6)])
-    user_guess_board = Board([[""] * 5 for i in range(6)])
+    computer_board = Board([[""] * 8 for i in range(8)])
+    user_guess_board = Board([[""] * 8 for i in range(8)])
     Ship.make_ships(computer_board)
     turns = 8
     while turns > 0:
         Board.print_board(user_guess_board)
         user_x_row, user_y_column = Ship.get_user_input(object)
-        while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board:
+        while user_guess_board.board[user_x_row][user_y_column] == "1" or user_guess_board:
          board[user_x_row][user_x_row] == "p"
          print("You have already chose this spot, please pick another")
          user_x_row, user_y_column == Ship.get_user_input(object)
@@ -82,7 +77,7 @@ def RunGame():
             user_guess_board.board[user_x_row][user_y_column] = "p"
         else:
             print("You did not find my ship!")
-            user_guess_board.board[user_x_row][user_y_column] = "-"
+            user_guess_board.board[user_x_row][user_y_column] = "1"
         if Ship.count_found_ships(user_guess_board) == "5" :
            print("Well done you managed to find all the ships!")
            break
