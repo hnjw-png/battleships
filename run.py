@@ -1,4 +1,6 @@
+import random
 from random import randint
+
 # hello message to player
 print("Welcome to Battleships, this is a one player game. You have 5 turns, and guesses must be between 0-5")
 print("Enter your name:")
@@ -30,9 +32,9 @@ class Ship:
     def make_ships(self):
         for i in range(5):
             self.x_row, self.y_column = random.randint(0,6), random,randint(0,6)
-            while self.board[self.x_row][self.y_column] == 'P':
+            while self.board[self.x_row][self.y_column] == 'p':
               self.x_row, self.y_column = random.randint(0,6), random,randint(0,6)
-            self.board[self.x_row][self.y_column] == 'P'
+            self.board[self.x_row][self.y_column] == 'p'
         return self.board
             
             
