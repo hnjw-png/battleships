@@ -21,7 +21,7 @@ class Board:
     def print_board(self):
       row_number = 1
       for row in self.board:
-          (row_number, "I" .join(row))
+          print("%d| %d|" % (row_number, "|" .join(row)))
           row_number += 1
 
 
@@ -31,9 +31,9 @@ class Ship:
 
     def make_ships(self):
         for i in range(5):
-            self.x_row, self.y_column = random.randint(0,6), random,randint(0,6)
+            self.x_row, self.y_column = random.randint(0,7), random.randint(0,7)
             while self.board[self.x_row][self.y_column] == 'p':
-              self.x_row, self.y_column = random.randint(0,6), random,randint(0,6)
+              self.x_row, self.y_column = random.randint(0,7), random.randint(0,7)
             self.board[self.x_row][self.y_column] == 'p'
         return self.board
             
@@ -46,10 +46,10 @@ class Ship:
             x_row = input("Type in row of ship again:")
 
 
-        y_column = input("Type in the Ship column number:").upper()
+        y_column = input("Type in the Ship column number:")
         while y_column not in '12345':
             print("not in the right place, seems you hae sailed away.")
-            y_column = input("Type in column of ship again:").upper()
+            y_column = input("Type in column of ship again:")
         return int(x_row) -1,(y_column)
       except ValueError and KeyError:
         print("not valid")
@@ -67,7 +67,7 @@ def count_found_ships(self):
 
 def RunGame():
     computer_board = Board([[""] * 5 for i in range(6)])
-    user_board = Board([[""] * 5 for i in range(6)])
+    user_guess_board = Board([[""] * 5 for i in range(6)])
     Ship.make_ships(computer_board)
     turns = 8
     while turns > 0:
