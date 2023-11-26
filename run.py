@@ -46,14 +46,14 @@ class Ship:
             x_row = input("Type in row of ship again:")
 
 
-        y_column = input("Type in the Ship column number:")
+        y_column = input("Type in the Ship column number:").upper()
         while y_column not in '12345':
             print("not in the right place, seems you hae sailed away.")
-            y_column = input("Type in column of ship again:")
-        return int(x_row) -1,(y_column) -1
+            y_column = input("Type in column of ship again:").upper()
+        return int(x_row) -1,(y_column)
       except ValueError and KeyError:
         print("not valid")
-        return self.user_get_input()
+        return self.get_user_input()
 
 
 # randomly find ship coordinates
@@ -66,8 +66,8 @@ def count_found_ships(self):
 
 
 def RunGame():
-    computer_board = Board([[""] * 6 for i in range(6)])
-    user_board = Board([[""] * 6 for i in range(6)])
+    computer_board = Board([[""] * 5 for i in range(6)])
+    user_board = Board([[""] * 5 for i in range(6)])
     Ship.make_ships(computer_board)
     turns = 8
     while turns > 0:
