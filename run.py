@@ -13,7 +13,7 @@ class Board:
      self.board = board
 
 
-     
+
 
     def print_board(self):
         print("1 2 3 4 5 6 7")
@@ -71,7 +71,8 @@ def RunGame():
     while turns > 0:
         Board.print_board(user_guess_board)
         user_x_row, user_y_column = Ship.get_user_input(object)
-        while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board.board[user_x_row][user_y_column] == "p" :
+        #stop picking the same place twice
+        while user_guess_board.board[user_x_row][user_y_column] == user_guess_board.board[user_x_row][user_y_column] == "p" :
           print("You have already chose this spot, please pick another")
           user_x_row, user_y_column == Ship.get_user_input(object)
         if computer_board.board[user_x_row][user_y_column] == "p" :
