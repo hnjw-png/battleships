@@ -12,8 +12,11 @@ class Board:
     def __init__(self, board):
      self.board = board
 
+
+     
+
     def print_board(self):
-        print("12345678")
+        print("1 2 3 4 5 6 7")
         row_number = 1
         for row in self.board:
           print("%d|%s|" % (row_number, "|".join(row)))
@@ -37,13 +40,13 @@ class Ship:
       try:
         x_row = input("Type in the Ship row number:")
         while x_row not in '1234567':
-            print("not in the right place, seems you hae sailed away.")
+            print("not in the right place.")
             x_row = input("Type in row of ship again:")
 
 
         y_column = input("Type in the Ship column number:")
         while y_column not in '1234567':
-            print("not in the right place, seems you hae sailed away.")
+            print("not in the right place.")
             y_column = input("Type in column of ship again:")
         return int(x_row) -1,(y_column)
       except ValueError and KeyError:
