@@ -75,9 +75,9 @@ def RunGame():
         #what did the user choose?
         user_x_row, user_y_column = Ship.get_user_input(object)
         #stop the player picking the same place twice
-        while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board.board[user_x_row][user_y_column] == "p" :
-          print("You have already chose this spot, please pick another")
-          user_x_row, user_y_column == Ship.get_user_input(object)
+        #while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board.board[user_x_row][user_y_column] == "p" :
+         # print("You have already chose this spot, please pick another")
+        user_x_row, user_y_column == Ship.get_user_input(object)
           #is it a hit or miss?
         if computer_board.board[user_x_row][user_y_column] == "p" :
           print("You managed to find one of my ships, what a hit!")
