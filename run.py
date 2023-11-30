@@ -2,7 +2,7 @@ import random
 from random import randint
 
 # hello message to player
-print("Welcome to Battleships, this is a one player game. You have 5 turns, and guesses must be between 0-5")
+print("Welcome to Battleships, this is a one player game. You have 8 turns, and guesses must be between 1-7")
 print("Enter your name:")
 x = input()
 print("Hello, lets play Battleships " + x)
@@ -16,11 +16,16 @@ class Board:
 
 
     def print_board(self):
-        print("1 2 3 4 5 6 7")
         row_number = 1
         for row in self.board:
           print("%d|%s|" % (row_number, "|".join(row)))
           row_number += 1
+        letter = 0
+        for letter in range(7):
+          print(chr(letter))
+          for column in range(len(self.board[letter])):
+            print([letter][column])
+
 
 
 class Ship:
