@@ -19,7 +19,7 @@ class Board:
         print("  " + " ".join(["A", "B", "C", "D", "E", "F", "G"]))
         row_number = 1
         for row in self.board:
-            print(f"{row_number} {' '.join(row)}")
+            print(f"{row_number} {'| '.join(row)}")
             row_number += 1
 
 
