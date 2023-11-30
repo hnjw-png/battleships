@@ -45,14 +45,11 @@ class Ship:
             print("not in the right place.")
             x_row = input("Type in row of ship again:")
 
-            
-
-
-        y_column = input("Type in the Ship column number:")
-        while y_column not in '1234567':
+        y_column = input("Type in the Ship column letter:")
+        while y_column not in 'ABCDEFG':
             print("not in the right place.")
             y_column = input("Type in column of ship again:")
-        return int(x_row) -1,(y_column)
+        return int(x_row) -1, (y_column).upper()
       except ValueError and KeyError:
         print("not valid")
         return self.get_user_input()
