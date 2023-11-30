@@ -67,16 +67,20 @@ def RunGame():
     computer_board = Board([[""] * 8 for i in range(8)])
     user_guess_board = Board([[""] * 8 for i in range(8)])
     Ship.make_ships(computer_board)
+    #begins 8 gos
     turns = 8
     while turns > 0:
         Board.print_board(user_guess_board)
+        #what did the user choose?
         user_x_row, user_y_column = Ship.get_user_input(object)
-        #stop picking the same place twice
+        #stop te user picking the same place twice
         while user_guess_board.board[user_x_row][user_y_column] == user_guess_board.board[user_x_row][user_y_column] == "p" :
           print("You have already chose this spot, please pick another")
           user_x_row, user_y_column == Ship.get_user_input(object)
+          #is it a hit or miss
         if computer_board.board[user_x_row][user_y_column] == "p" :
           print("You managed to find one of my ships, what a hit!")
+          #user missed the ship
           user_guess_board.board[user_x_row][user_y_column] = "p"
         else:
           print("You did not find my ship!")
@@ -86,7 +90,7 @@ def RunGame():
           break
         else:
           turns -= 1
-          print(f"You got this many guesss {turns} left, Good Luck!")
+          print(f"You got this many guesss {turns} left, Good Luck! " )
           if turns == 0:
             print("Oh looks like you sunk all you can today, you are out of turns")
             Board.print_board(user_guess_board)
