@@ -37,7 +37,7 @@ class Ship:
             self.board[self.x_row][self.y_column] == 'p'
         return self.board
             
-       #get the players input, and react if not correct     
+       #ask for the users input, and react if not correct     
     def get_user_input(self):
       try:
         x_row = input("Type in the Ship row number:")
@@ -49,7 +49,7 @@ class Ship:
         while y_column not in 'ABCDEFG':
             print("not in the right place.")
             y_column = input("Type in column of ship again:")
-        return int(x_row) -1, (y_column).upper()
+        return int(x_row) -1, (y_column)
       except ValueError and KeyError:
         print("not valid")
         return self.get_user_input()
