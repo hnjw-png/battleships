@@ -2,7 +2,7 @@ import random
 from random import randint
 
 # hello message to player
-print("Welcome to Battleships, this is a one player game. You have 8 turns, and guesses must be between 1-8 and A nnd G")
+print("Welcome to Battleships, this is a one player game. You have 8 turns, and guesses must be between 1-8 and A and G")
 print("Enter your name:")
 x = input()
 print("Hello, lets play Battleships " + x)
@@ -16,7 +16,7 @@ class Board:
 #create the battleship board.
 
     def print_board(self):
-        print("  " + " ".join(["A", "B", "C", "D", "E", "F", "G", "H"]))
+        print("  " + " ".join(["1", "2", "3", "4", "5", "6", "7"]))
         row_number = 1
         for row in self.board:
             print(f"{row_number} {'| '.join(row)}")
@@ -34,10 +34,10 @@ class Ship:
             self.x_row, self.y_column = random.randint(0,7), random.randint(0,7)
             while self.board[self.x_row][self.y_column] == 'p':
               self.x_row, self.y_column = random.randint(0,7), random.randint(0,7)
-            self.board[self.x_row][self.y_column] == 'p'
+            self.board[self.x_row][self.y_column] = 'p'
         return self.board
             
-       #ask for the users input, and react if not correct     
+#ask for the users input, and react if not correct     
     def get_user_input(self):
       try:
         x_row = input("Type in the Ship row number:")
@@ -45,8 +45,8 @@ class Ship:
             print("not in the right place.")
             x_row = input("Type in row of ship again:")
 
-        y_column = input("Type in the Ship column letter:")
-        while y_column not in 'ABCDEFG':
+        y_column = input("Type in the Ship column NUMBER:")
+        while y_column not in '1234567':
             print("not in the right place.")
             y_column = input("Type in column of ship again:")
         return int(x_row) -1, (y_column)
@@ -56,12 +56,12 @@ class Ship:
 
 
 # randomly find ship coordinates
-def count_found_ships(self):
-    found_ships = 0
-    for row in self.board:
-        for column in row == 'p':
-            found_ships += 1
-    return found_ships
+    def count_found_ships(self):
+      found_ships = 0
+      for row in self.board:
+          for column in row == 'p':
+              found_ships += 1
+              return found_ships
 
 
 def RunGame():
@@ -75,8 +75,8 @@ def RunGame():
         #what did the user choose?
         user_x_row, user_y_column = Ship.get_user_input(object)
         #stop the player picking the same place twice
-        #while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board.board[user_x_row][user_y_column] == "p" :
-         # print("You have already chose this spot, please pick another")
+        while user_guess_board.board(user_x_row)(user_y_column) == "-" or user_guess_board.board(user_x_row)(user_y_column) == "p" :
+          print("You have already chose this spot, please pick another")
         user_x_row, user_y_column == Ship.get_user_input(object)
           #is it a hit or miss?
         if computer_board.board[user_x_row][user_y_column] == "p" :
