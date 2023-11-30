@@ -2,7 +2,7 @@ import random
 from random import randint
 
 # hello message to player
-print("Welcome to Battleships, this is a one player game. You have 8 turns, and guesses must be between 1-7")
+print("Welcome to Battleships, this is a one player game. You have 8 turns, and guesses must be between 1-8 and A nnd G")
 print("Enter your name:")
 x = input()
 print("Hello, lets play Battleships " + x)
@@ -16,7 +16,7 @@ class Board:
 #create the battleship board.
 
     def print_board(self):
-        print("  " + " ".join(["A", "B", "C", "D", "E", "F", "G"]))
+        print("  " + " ".join(["A", "B", "C", "D", "E", "F", "G", "H"]))
         row_number = 1
         for row in self.board:
             print(f"{row_number} {'| '.join(row)}")
@@ -78,7 +78,7 @@ def RunGame():
         #what did the user choose?
         user_x_row, user_y_column = Ship.get_user_input(object)
         #stop the player picking the same place twice
-        while user_guess_board.board[user_x_row][user_y_column] == user_guess_board.board[user_x_row][user_y_column] == "p" :
+        while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board.board[user_x_row][user_y_column] == "p" :
           print("You have already chose this spot, please pick another")
           user_x_row, user_y_column == Ship.get_user_input(object)
           #is it a hit or miss?
