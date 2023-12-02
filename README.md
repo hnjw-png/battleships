@@ -18,7 +18,7 @@ Its a challenging game for one player, a game of guessing and chance.
 
 ## Responsiveness
 
-# Features and Data Models 
+# Features and Data Models explained:
 
 ## Instructions and Hello prompt
 
@@ -106,7 +106,9 @@ Its a challenging game for one player, a game of guessing and chance.
 
 # Improvements
 
+* A improvement could be to make it a two player game.
 
+* Another improvement could be to add letters to the top row to make the game more user friendly.
 
 ## Testing
 
