@@ -7,13 +7,13 @@ print("Enter your name:")
 x = input()
 print("Hello, lets play Battleships " + x)
 
-#create the board class for object orientation
+# create the board class for object orientation
 class Board:
     def __init__(self, board):
      self.board = board
 
 
-#create the battleship board.
+# create the battleship board, numbering columns and rows
 
     def print_board(self):
         print("  " + " ".join(["1", "2", "3", "4", "5", "6", "7"]))
@@ -23,7 +23,7 @@ class Board:
             row_number += 1
 
 
-#make the ships and coordinates for locations of ships
+# make the ships and create 5 random ship coorindates 
 
 class Ship:
     def __init__(self, board):
@@ -37,7 +37,7 @@ class Ship:
             self.board[self.x_row][self.y_column] = 'p'
         return self.board
             
-#ask for the users input, and react if not correct     
+# ask for the users input, and react if not within the board    
     def get_user_input(self):
       try:
           x_row = int(input("Type in the Ship row number:")) - 1
@@ -57,7 +57,7 @@ class Ship:
 
 
 
-# randomly find ship coordinates
+# count how many ships the user has found
     def count_found_ships(self):
       found_ships = 0
       for row in self.board:
@@ -71,30 +71,31 @@ def RunGame():
     computer_board = Board([[""] * 12 for i in range(7)])
     user_guess_board = Board([[""] * 12 for i in range(7)])
     Ship.make_ships(computer_board)
-    #begins 8 go's
+    # begins 12 go's
     turns = 12
     while turns > 0:
         Board.print_board(user_guess_board)
-        #what did the user choose?
+        # what did the user choose?
         user_x_row, user_y_column = Ship.get_user_input(object)
-        #stop the player picking the same place twice
+        # stop the player picking the same place twice
         while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board.board[user_x_row][user_y_column] == "p":
           print("You have already chosen this spot, please pick another")
           user_x_row, user_y_column = Ship.get_user_input(object)
-          #is it a hit or miss?
+          # is it a hit or miss?
         if computer_board.board[user_x_row][user_y_column] == "p" :
           print("You managed to find one of my ships, what a hit!")
-          #player missed the ship
+          # player missed the ship
           user_guess_board.board[user_x_row][user_y_column] = "p"
         else:
           print("You did not find my ship!")
           user_guess_board.board[user_x_row][user_y_column] = "-"
+          # are all ships found?
         if Ship.count_found_ships(user_guess_board) == "5" :
           print("Well done you managed to find all the ships!")
           break
         else:
           turns -= 1
-          #how many turns left?
+          # how many turns left?
           print(f"You got this many guesss {turns} left, Good Luck! " )
           if turns == 0:
             print("Oh looks like you sunk all you can today, you are out of turns")
