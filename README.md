@@ -102,9 +102,18 @@ Its a challenging game
 
 ## Testing
 
-* Currently the board appears without problem in the console, the prompts work properly as well. 
+* Currently the board appears without problem in the console, the prompts work properly as well. It took a few tried to get the numbers to appear correctly on the board. But it is now fixed, though one improvement could be that the board doe not move to the right, when a p or -is added.
 
-*
+* I am having a error with reading the valueerror, if the user enters a letter the game throughs a error instead of a prompt that it was invalid and continuing. 
+
+* I have manually tested the game to see if each function works : 
+1. I have tested, the same guess twice, and that works.
+2. I have tested if the user can guess outside the board or not, it works and the user is prompted to make another valid guess.
+3. I have tested if the ships appear when found and they do.
+4. I have also tested if the - appears when there is a wrong guess and it does.
+5. I have checked if the user can keep track of how many turns remaining and they can.
+6. I have looked to see if the game ends automtically after turns have been exceeded, and it does.
+7. I have tried to find all ships to check to see if the game behaves correctly if the user finds all ships. And after many attempts of playing the game, I found them all and it worked correctly.
 
 
 while True:
@@ -118,6 +127,7 @@ while True:
   
 ## Python Validator
 
+* Currently only indentation errors in the validator, I will fix this before submission.
 
 ## Deployment
 
