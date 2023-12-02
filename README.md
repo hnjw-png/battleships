@@ -9,11 +9,15 @@ The general rules of battleships apply, is to hit all battleships within 12 turn
 There wil be 5 ships to find, and 12 turns to find them. The game will keep track on how many ships have been found. The game will automatically end if the player does not find all ships within 12 turns. Again there will be prompts throughout the game to keep the player on track.
 Its a challenging game for one player, a game of guessing and chance. 
 
-## User Goals
+## User Goals and stories
 
 * The user should be able to play a one player game, the user should be able to keep track of their own guesses and amount of turns. The game will continously give prompts after turns to tell the user how they are doing and what to do.
 
-* The board will appear again after each guess, it wil be updated with the users guesses. The board reappaering each time, improves the user experience.
+* The board will appear again after each guess, it wil be updated with the users guesses. The board will be reappearing each time updated with all user guess each time, improves the user experience.
+
+* The user should be able to see if they hit or miss a ship.
+
+* The user cannot enter a value higher than 7, and cannot answer with a letter.
 
 
 ## Responsiveness
@@ -120,7 +124,7 @@ Its a challenging game for one player, a game of guessing and chance.
 * I have manually tested the game to see if each function works : 
 1. I have tested, if the user cannot guess the same guess twice, and that works and the user is prompted that they have guessed the same place twice, and then gets another turn.
 2. I have tested if the user can guess outside the board or not, it works and the user is prompted to make another valid guess...if they guess a number which is not with 1-7.
-3. I have tested if the ships appear on the board with 'p' when found and they do. As well as after each guess the baord appears again with all guesses updated each time.
+3. I have tested if the ships appear on the board with 'p' when found and they do. As well as after each guess the board appears again with all guesses updated each time.
 4. I have also tested if the - appears when there is a wrong guess and it does.
 5. I have checked if the user can keep track of how many turns remaining and they can. They see a prompt stating how many guesses remaining.
 6. I have looked to see if the game ends automatically after turns have been exceeded, and it does.
