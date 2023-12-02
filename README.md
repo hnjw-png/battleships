@@ -4,10 +4,9 @@
 ## Instructions and information: 
 
 Here you will experience a simple game of battleships, using python, and stored in a run.py. 
-The game will consist of a instructions and then ask for the name of player. There after there will be a board, with 5 rows and 5 columns.
-The general rules of battleships apply, is to hit both battleships within 5 turns.
-This game will generate a random guess from the computer. This function is not yet in the game, in future I will add the computers random choice too.
-The game will restart when there is a winner. You can continue, another game thereafter. This function is not working, this is something to work out in the future. As the reason is that the function has not been written.
+The game will consist of a instructions and then ask for the name of player. There after there will be a board, with 7 rows and 7 columns.
+The general rules of battleships apply, is to hit both battleships within 8 turns.
+There wil be fiv ships to find, 
 
 ## Responsiveness
 
@@ -26,63 +25,68 @@ The game will restart when there is a winner. You can continue, another game the
 
 ## The Board
 
-* 5 rows, 5 colums, no way of clicking out of the board.
+* 7 rows, 7 columns, no way of clicking out of the board.
 
-* Here I have created a simplifed version of battleships, the grd is made up of 5 rows and columns. These are made up with 0's.
+* Here I have created a board using object orinenatated programming, using the def_init_(self) method. 
 
-* There is one board for one player, that only appears once.
+* The board will reapppear updated with previous guesses for each turn.
 
-![image](https://user-images.githubusercontent.com/120515252/225860328-72cf9411-0a38-49e4-b541-003abe4534d3.png)
+* I have hidden the ships in the computers board so to speak, and the user has to find them on their board.
+
+* Here I have made rows and columns with numbering inline to 7. Inside the board is made up by these '|' to make up a visual board.
 
 
-## The Boats
 
-* There will be two boats in the game, there is a function that picks coordinates randomly, they two more functions representing where the boats will be places at random. 
+## The Ships
 
-* Right now you cannot see what coordinates you have choose on the board, in future there will be visible on the board. As its highly important in the game that you know your hits and misses.
+* There will be 5 boats in the game, there is a function that picks coordinates randomly, they two more functions representing where the boats will be places at random. 
 
-![image](https://user-images.githubusercontent.com/120515252/225860406-5b6cc5ec-a4f7-4088-a7fc-9844e2c9ee0b.png)
+* You will be able to see where you have chosen, if you don't find the ship a '-' will appear where you have guessed. If you have guessed correctly a 'p' will appear in that place.
 
-* Here I have attempted to add p as the mark for when you have hit a boat, but right now it does not seem to function. This could be because I have not yet guessed correctly. See below the code that should make this happen:
+* You will not be able to guess the same place twice, or guess somewhere that is outside of the radius of the board (0-7)
 
-![image](https://user-images.githubusercontent.com/120515252/225862235-831bd94f-c02f-4722-bbd6-4462a372f8e3.png)
+* The game will automatically end after 8 turns, you will receive a message stating your ending game statement.
 
+* I created the def make_ships(self) function, to create the ships in the game, using a in range statement and random, randint to place 5 ships in random places in the board. Then using the self.board statement to call the ships to be made within the board so to speak.
+
+* I also needed to create a function that found the ships, that counts how many ships. Again I have utlised the self method, def_count_found_ships(self)
 
 
 ## The guess row and column prompt
 
-* After each go, there will be a automatic prompt to ask for your guess, you will have 5 chances to guess correctly. 
+* After each turn, there will be a automatic prompt to ask for your guess, you will have 8 chances to find all the ships. 
 
-* Right now, instead of 5 turns, you get 6 turns. I future, this will not happen.
-
-![image](https://user-images.githubusercontent.com/120515252/225860545-07a36593-08bd-4494-94c5-3d50f8665700.png)
+* If you guess a letter or another key, you will get a prompt to guess again, due to your entry being invalid.
 
 
 ## The function that stops you from selecting coordinates outside of the board game.
 
 * You will be prompted that you have clicked outside the board and asked to make another guess.
 
-* You will be informed if you guess correctly.
-
-* There are 2 ships to be found.
+* I am using the while, not in range method. This reads if the user types in a number which is outside of the board.
 
 ## You didnt sink the ships
 
 * You have 5 chances to choose correctly, before the game restarts.
 
-* Right now the user has to manually reset the game.
+
 
 ![image](https://user-images.githubusercontent.com/120515252/225862519-5b3e23ff-9088-4e80-bfab-d4d318586bc0.png)
 
 
 ## Automatic error is a letter is typed of instead of a number
 
-* You will get a error message if you choose anything other than a number.
+* You will get a error message if you choose anything other than a number. This is using the except ValueError method.
 
-* Right now the error message works but it stops the whole game this is something to fix in the future. As this seriously effects the use experience.
+## Hit, miss.
 
-![image](https://user-images.githubusercontent.com/120515252/225860805-139c1964-2d5f-4a05-a815-2be681671ad6.png)
+* In the Rungame function, I use 'if' statements to check if the user has hit or missed the ships.
 
+* Here I call the count_ships function, to as its sounds count how many ships have been found. If they have, you will get a prompt that you have found all ships. Otherwise, I use the 'else' method to calculate how turns are left. 
+
+* You continue the game until your turns run out or win.
+
+## No guessing the same place twice
 
 # Improvements
 

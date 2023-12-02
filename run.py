@@ -23,7 +23,7 @@ class Board:
             row_number += 1
 
 
-#make the ships
+#make the ships and coordinates for locations of ships
 
 class Ship:
     def __init__(self, board):
@@ -31,9 +31,9 @@ class Ship:
 
     def make_ships(self):
         for i in range(5):
-            self.x_row, self.y_column = random.randint(0,7), random.randint(0,7)
+            self.x_row, self.y_column = random.randint(0,6), random.randint(0,6)
             while self.board[self.x_row][self.y_column] == 'p':
-              self.x_row, self.y_column = random.randint(0,7), random.randint(0,7)
+              self.x_row, self.y_column = random.randint(0,6), random.randint(0,6)
             self.board[self.x_row][self.y_column] = 'p'
         return self.board
             
@@ -53,7 +53,7 @@ class Ship:
           return x_row, y_column
       except ValueError:
           print("Invalid input. Please enter a valid row and column.")
-          return self.get_user_input()
+          return self.get_user_input
 
 
 
@@ -68,8 +68,8 @@ class Ship:
 
 
 def RunGame():
-    computer_board = Board([[""] * 8 for i in range(8)])
-    user_guess_board = Board([[""] * 8 for i in range(8)])
+    computer_board = Board([[""] * 8 for i in range(7)])
+    user_guess_board = Board([[""] * 8 for i in range(7)])
     Ship.make_ships(computer_board)
     #begins 8 go's
     turns = 8
