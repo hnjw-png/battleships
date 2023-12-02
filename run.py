@@ -68,11 +68,11 @@ class Ship:
 
 
 def RunGame():
-    computer_board = Board([[""] * 8 for i in range(7)])
-    user_guess_board = Board([[""] * 8 for i in range(7)])
+    computer_board = Board([[""] * 12 for i in range(7)])
+    user_guess_board = Board([[""] * 12 for i in range(7)])
     Ship.make_ships(computer_board)
     #begins 8 go's
-    turns = 8
+    turns = 12
     while turns > 0:
         Board.print_board(user_guess_board)
         #what did the user choose?
