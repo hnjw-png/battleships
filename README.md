@@ -7,7 +7,7 @@ Here you will play a simple logical game of battleships, using python, and store
 The game will consist of a instructions and then ask for the name of player. There after there will be a board, with 7 rows and 7 columns. Thereafter the player will be asked to choose a row number and a column number.
 The general rules of battleships apply, is to hit all battleships within 12 turns, to win the game.
 There wil be 5 ships to find, and 12 turns to find them. The game will keep track on how many ships have been found. The game will automatically end if the player does not find all ships within 12 turns. Again there will be prompts throughout the game to keep the player on track.
-Its a challenging game for one player, a game of guessing and chance.
+Its a challenging game for one player, a game of guessing and chance. 
 
 ## User Goals
 
@@ -118,13 +118,14 @@ Its a challenging game for one player, a game of guessing and chance.
 * I am having a error with reading the valueerror, if the user enters a letter the game throughs a error instead of a prompt that it was invalid and continuing. 
 
 * I have manually tested the game to see if each function works : 
-1. I have tested, the same guess twice, and that works.
-2. I have tested if the user can guess outside the board or not, it works and the user is prompted to make another valid guess.
-3. I have tested if the ships appear when found and they do.
+1. I have tested, if the user cannot guess the same guess twice, and that works and the user is prompted that they have guessed the same place twice, and then gets another turn.
+2. I have tested if the user can guess outside the board or not, it works and the user is prompted to make another valid guess...if they guess a number which is not with 1-7.
+3. I have tested if the ships appear on the board with 'p' when found and they do. As well as after each guess the baord appears again with all guesses updated each time.
 4. I have also tested if the - appears when there is a wrong guess and it does.
-5. I have checked if the user can keep track of how many turns remaining and they can.
-6. I have looked to see if the game ends automtically after turns have been exceeded, and it does.
+5. I have checked if the user can keep track of how many turns remaining and they can. They see a prompt stating how many guesses remaining.
+6. I have looked to see if the game ends automatically after turns have been exceeded, and it does.
 7. I have tried to find all ships to check to see if the game behaves correctly if the user finds all ships. And after many attempts of playing the game, I found them all and it worked correctly.
+8. Lastly I am testing if the game can read a Value error, intially it was throwing a error, due to not get_user_input not being defined.. I have fixed this and now a user cannot type anything invalid such as A,D,F.
 
 ## Unsolved bugs & tests
 
