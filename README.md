@@ -147,7 +147,7 @@ Its a challenging game for one player, a game of guessing and chance.
 
 * Attach you github repository to your heroku account.
 
-* Go to the tab, deplpy.
+* Go to the tab, deploy.
 
 * Then choose method, this time its github.
 
