@@ -46,12 +46,14 @@ Its a challenging game
 
 * I created the def make_ships(self) function, to create the ships in the game, using i in range statement and random.randint to place 5 ships in random places in the board. Following this down in the rungame() function, I call the make_ships function, within a computer board, the user can only see their user board.
 
-* I created a function that counts how many ships. Again I have utlised the self method, def_count_found_ships(self), the amount of found ships starts naturally on 0. I have then called this function in my rungame() function, it keeps track of all 5 ships have been found or not. 
+* I created a function that counts how many ships have been found. Again I have utlised the self method, def_count_found_ships(self), the amount of found ships starts naturally on 0. I have then called this function in my rungame() function, it keeps track of all 5 ships have been found or not. 
 
 
 ## The guess row and column prompt
 
 * After each turn, there will be a automatic prompt to ask for your guess, you will have 8 chances to find all the ships. 
+
+* The user always will be asked by the prompt, to guess a row and then to guess a column.
 
 * If you guess a letter or another key, you will get a prompt to guess again, due to your entry being invalid.
 
@@ -60,18 +62,18 @@ Its a challenging game
 
 ## The function that stops you from selecting coordinates outside of the board game.
 
-* You will be prompted that you have not chosen a place on the board and asked to make another guess.
+* I used a function called def get_user_input(self), and the the try, while in range method to read the users guesses and read if they are guessing a number inside the board.You will be prompted that you have not chosen a place on the board and asked to make another guess. 
 
-* I am using the while, not in range method. This reads if the user types in a number which is outside of the board.
 
-## You didnt sink the ships
+## How many turns, and calculating amount of turns.
 
 * You have 12 chances to choose correctly, before the game ends.
 
 * The while method is used in my rungame function, to keep track of how turns the user has taken. The users turns will not exceed 12.
 
-* If the user finds all the ships before the turns end the game will end and you get a prompt that the user has found all ships.
+* A prompt keeps the user informed of how many turns they have remaining.
 
+* If the user finds all the ships before the turns end the game will end, and you get a prompt that the user has found all ships.
 
 
 ## Automatic error is a letter is typed of instead of a number
@@ -82,11 +84,17 @@ Its a challenging game
 
 * In the Rungame function, I use 'if' statements to check if the user has hit or missed the ships.
 
-* Here I call the count_ships function, to as its sounds count how many ships have been found. If they have, you will get a prompt that you have found all ships. Otherwise, I use the 'else' method to calculate how turns are left. 
+* If the user has hit a ship, the user will see a prompt, stating they have a hit a ship. 
 
-* You continue the game until your turns run out or win.
+* If the user missed the ships, the user will see a prompt stating they have missed the ships.
+
+* I call the count_ships function in rungame function, to, as its sounds, count how many ships have been found. If they have all been found, you will get a prompt that you have found all ships. Otherwise, I use the 'else' method to calculate how many turns are left. 
+
+* You continue the game until your turns run out or win. The user will get a prompt is they find all ships and the game will end. Or they will get a prompt stating they didn't find the ships, when turns end.
 
 ## No guessing the same place twice
+
+* In the rungame function, it will read if you have already guessed a place or not. It reads if the cooridinates are already in use or not, by reading if "-" or "p" are already there, due to a previous guess.
 
 # Improvements
 
@@ -96,9 +104,7 @@ Its a challenging game
 
 * Currently the board appears without problem in the console, the prompts work properly as well. 
 
-* The next debug I am doing is to see why you do not see when you have hit and miss. 
-
-* I am creating a piece of code to restart game, right now it looks like this:
+*
 
 
 while True:
