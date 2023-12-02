@@ -1,16 +1,24 @@
 
-# Welcome to Battleships! 
+# Welcome to Battleships for 1 player! 
 
 ## Instructions and information: 
 
-Here you will experience a simple game of battleships, using python, and stored in a run.py. 
-The game will consist of a instructions and then ask for the name of player. There after there will be a board, with 7 rows and 7 columns.
-The general rules of battleships apply, is to hit both battleships within 12 turns.
-There wil be five ships to find, and eight turns to find them. The game will keep track on how many ships have been found.
-Its a challenging game 
+Here you will play a simple logical game of battleships, using python, and stored in a run.py. 
+The game will consist of a instructions and then ask for the name of player. There after there will be a board, with 7 rows and 7 columns. Thereafter the player will be asked to choose a row number and a column number.
+The general rules of battleships apply, is to hit all battleships within 12 turns, to win the game.
+There wil be 5 ships to find, and 12 turns to find them. The game will keep track on how many ships have been found. The game will automatically end if the player does not find all ships within 12 turns. Again there will be prompts throughout the game to keep the player on track.
+Its a challenging game for one player, a game of guessing and chance.
+
+## User Goals
+
+* The user should be able to play a one player game, the user should be able to keep track of their own guesses and amount of turns. The game will continously give prompts after turns to tell the user how they are doing and what to do.
+
+* The board will appear again after each guess, it wil be updated with the users guesses. The board reappaering each time, improves the user experience.
+
 
 ## Responsiveness
 
+# Features and Data Models 
 
 ## Instructions and Hello prompt
 
