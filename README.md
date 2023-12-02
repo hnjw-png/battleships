@@ -18,6 +18,7 @@ Its a challenging game for one player, a game of guessing and chance.
 
 ## Responsiveness
 
+
 # Features and Data Models explained:
 
 ## Instructions and Hello prompt
@@ -110,7 +111,7 @@ Its a challenging game for one player, a game of guessing and chance.
 
 * Another improvement could be to add letters to the top row to make the game more user friendly.
 
-## Testing
+## Solved Bugs & Testing
 
 * Currently the board appears without problem in the console, the prompts work properly as well. It took a few tried to get the numbers to appear correctly on the board. But it is now fixed, though one improvement could be that the board doe not move to the right, when a p or -is added.
 
@@ -125,15 +126,9 @@ Its a challenging game for one player, a game of guessing and chance.
 6. I have looked to see if the game ends automtically after turns have been exceeded, and it does.
 7. I have tried to find all ships to check to see if the game behaves correctly if the user finds all ships. And after many attempts of playing the game, I found them all and it worked correctly.
 
+## Unsolved bugs & tests
 
-while True:
-        game()
-        restart = input('Do you want to restart Yes please/No thanks?')
-        if restart == 'N'
-            break
-        elif restart == 'Y':
-            continue
-  
+* none
   
 ## Python Validator
 
