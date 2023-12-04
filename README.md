@@ -5,8 +5,8 @@
 
 Here you will play a simple logical game of battleships, using python, and stored in a run.py. 
 The game will consist of a instructions and then ask for the name of player. There after there will be a board, with 7 rows and 7 columns. Thereafter the player will be asked to choose a row number and a column number.
-The general rules of battleships apply, is to hit all battleships within 12 turns, to win the game.
-There wil be 5 ships to find, and 12 turns to find them. The game will keep track on how many ships have been found. The game will automatically end if the player does not find all ships within 12 turns. Again there will be prompts throughout the game to keep the player on track.
+The general rules of battleships apply, is to hit all battleships within a certain amount of turns, to win the game.
+There wil be 5 ships to find, and 12 turns to find them. The game will keep track on how many ships have been found. The game will automatically end if the player does not find all ships within 20 turns. Again there will be prompts throughout the game to keep the player on track.
 Its a challenging game for one player, a game of guessing and chance. 
 
 ## User Goals and stories
