@@ -37,19 +37,19 @@ Its a challenging game for one player, a game of guessing and chance.
 
 * 7 rows, 7 columns, no way of clicking out of the board.
 
-* Here I have created a board using object orinenatated programming, using the def_init_(self) method. This creates a object, then I create a computer board
+* Here I have created a board using object orienatated programming, using the def_init_(self) method. This method creates a hidden computer board, and a visabe user board.
 
 * The board itself will reapppear updated with previous guesses for each turn. I do this by call
 
-* I have hidden the ships in the computers board so to speak, and the user has to find them on their board.
+* I have hidden the ships in the hidden computer board , and the user has to find them on their visable board.
 
-* Here I have made rows and columns with numbering inline to 7. Inside the board is made up by these '|' to make up a visual board.
+* Here I have made rows and columns with numbering inline to 7. Inside the board is made up by these ' | ' to make up a visual board. 
 
 
 
 ## The Ships
 
-* There will be 5 boats in the game, there is a function that picks coordinates randomly, I used the random.randint method to get the computer to randomly place in the ships inside the board.
+* There will be 5 boats in the game, there is a function that picks coordinates randomly and places a ship,'p', in 5 places inside the hidden computer board.
 
 * You will be able to see where you have chosen, if you don't find the ship a '-' will appear where you have guessed. If you have guessed correctly a 'p' will appear in that place.
 
@@ -59,12 +59,12 @@ Its a challenging game for one player, a game of guessing and chance.
 
 * I created the def make_ships(self) function, to create the ships in the game, using i in range statement and random.randint to place 5 ships in random places in the board. Following this down in the rungame() function, I call the make_ships function, within a computer board, the user can only see their user board.
 
-* I created a function that counts how many ships have been found. Again I have utlised the self method, def_count_found_ships(self), the amount of found ships starts naturally on 0. I have then called this function in my rungame() function, it keeps track of all 5 ships have been found or not. 
+* I created a function that counts how many ships have been found. Again I have utlised the self method, def_count_found_ships(self). The amount of found ships starts naturally on 0, its counted in this function. I have then called this function count_ships in my rungame() function, it keeps track of all the ships have been found or not.
 
 
 ## The guess row and column prompt
 
-* After each turn, there will be a automatic prompt to ask for your guess, you will have 8 chances to find all the ships. 
+* After each turn, there will be a automatic prompt to ask for your guess, you will have 20 chances to find all the ships.
 
 * The user always will be asked by the prompt, to guess a row and then to guess a column.
 
@@ -117,9 +117,11 @@ Its a challenging game for one player, a game of guessing and chance.
 
 ## Solved Bugs & Testing
 
-* Currently the board appears without problem in the console, the prompts work properly as well. It took a few tried to get the numbers to appear correctly on the board. But it is now fixed, though one improvement could be that the board doe not move to the right, when a p or -is added.
+* Currently the board appears without problem in the console, the prompts works properly as well. It took a few tried to get the numbers to appear correctly on the board. But it is now fixed, though one improvement could be that the board doe not move to the right, when a p or - is added.
 
-* I am having a error with reading the valueerror, if the user enters a letter the game throughs a error instead of a prompt that it was invalid and continuing. 
+* A thing while it wasn't a error, but it did effect the user experience was that I orginally had only 12 rounds before the game ended. But while testing, it seemed infair to have so few chances to find all 5 ships in a board of 49 possible locations. So I decided to make the user experience better and more fair, and changed it 20turns, this gives much betters odds.
+
+* There was a error with reading the valueerror, if the user enters a letter the game throughs a error instead of a prompt that it was invalid and continuing. But I have now corrected this by adding a static method, now is any other character is used than 1-7...the user gets prompted to pick a valid number, and the game continues.
 
 * I have manually tested the game to see if each function works : 
 1. I have tested, if the user cannot guess the same guess twice, and that works and the user is prompted that they have guessed the same place twice, and then gets another turn.
