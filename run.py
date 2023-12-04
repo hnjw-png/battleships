@@ -22,7 +22,7 @@ class Board:
         print("  " + " ".join(["1", "2", "3", "4", "5", "6", "7"]))
         row_number = 1
         for row in self.board:
-            print(f"{row_number} {' '.join(row)}")
+            print(f"{row_number} {'|'.join(row)}")
             row_number += 1
 
 
@@ -33,7 +33,7 @@ class Ship:
         self.board = board
 
     def make_ships(self):
-        for i in range(8):
+        for i in range(5):
             self.x_row, self.y_column = random.randint(0,6), random.randint(0,6)
             while self.board[self.x_row][self.y_column] == 'p':
               self.x_row, self.y_column = random.randint(0,6), random.randint(0,6)
