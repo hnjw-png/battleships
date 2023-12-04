@@ -37,9 +37,9 @@ Its a challenging game for one player, a game of guessing and chance.
 
 * 7 rows, 7 columns, no way of clicking out of the board.
 
-* Here I have created a board using object orinenatated programming, using the def_init_(self) method. 
+* Here I have created a board using object orinenatated programming, using the def_init_(self) method. This creates a object, then I create a computer board
 
-* The board itself will reapppear updated with previous guesses for each turn.
+* The board itself will reapppear updated with previous guesses for each turn. I do this by call
 
 * I have hidden the ships in the computers board so to speak, and the user has to find them on their board.
 
@@ -49,7 +49,7 @@ Its a challenging game for one player, a game of guessing and chance.
 
 ## The Ships
 
-* There will be 5 boats in the game, there is a function that picks coordinates randomly, I used the random.randint method to randomly place in the ships inside the board.
+* There will be 5 boats in the game, there is a function that picks coordinates randomly, I used the random.randint method to get the computer to randomly place in the ships inside the board.
 
 * You will be able to see where you have chosen, if you don't find the ship a '-' will appear where you have guessed. If you have guessed correctly a 'p' will appear in that place.
 

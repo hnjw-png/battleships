@@ -10,7 +10,7 @@ print("Enter your name:")
 x = input()
 print("Hello, lets play Battleships " + x)
 
-# create the board class for object orientation
+# create computer hidden board, and user board.
 class Board:
     def __init__(self, board):
      self.board = board
@@ -22,16 +22,16 @@ class Board:
         print("  " + " ".join(["1", "2", "3", "4", "5", "6", "7"]))
         row_number = 1
         for row in self.board:
-            print(f"{row_number} {'| '.join(row)}")
+            print(f"{row_number} {' | '.join(row)}")
             row_number += 1
 
 
-# make the ships and create 5 random ship coorindates 
+# make the ships, and create 5 random ship coorindates 
 
 class Ship:
     def __init__(self, board):
         self.board = board
-
+# hide 5 ships in computer board
     def make_ships(self):
         for i in range(5):
             self.x_row, self.y_column = random.randint(0,6), random.randint(0,6)
@@ -53,7 +53,7 @@ class Ship:
           while y_column not in range(0, 7):  
               print("Not in the right place.")
               y_column = int(input("Type in column of ship again:")) - 1
-
+# make sure no invalid characters are accepted
           return x_row, y_column
       except ValueError:
           print("Invalid input. Please enter a valid row and column.")
@@ -61,7 +61,7 @@ class Ship:
 
 
 
-# count how many ships the user has found
+# count how many ships the user has found using counter
     def count_found_ships(self):
       found_ships = 0
       for row in self.board:
@@ -72,8 +72,10 @@ class Ship:
 
 
 def RunGame():
-    computer_board = Board([[""] * 8 for i in range(7)])
-    user_guess_board = Board([[""] * 8 for i in range(7)])
+# call the board 
+    computer_board = Board([[""] * 7 for i in range(7)])
+# call the 
+    user_guess_board = Board([[""] * 7 for i in range(7)])
     Ship.make_ships(computer_board)
     # begins 20 go's
     turns = 20
