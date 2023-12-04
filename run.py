@@ -33,7 +33,7 @@ class Ship:
         self.board = board
 
     def make_ships(self):
-        for i in range(5):
+        for i in range(8):
             self.x_row, self.y_column = random.randint(0,6), random.randint(0,6)
             while self.board[self.x_row][self.y_column] == 'p':
               self.x_row, self.y_column = random.randint(0,6), random.randint(0,6)
