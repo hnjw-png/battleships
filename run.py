@@ -10,7 +10,7 @@ print("Enter your name:")
 x = input()
 print("Hello, lets play Battleships " + x)
 
-# create computer hidden board, and user board.
+# create computer hidden board, and user board
 class Board:
     def __init__(self, board):
      self.board = board
@@ -32,7 +32,7 @@ class Ship:
 # load hidden computer board, and visable user board
     def __init__(self, board):
         self.board = board
-# hide 5 ships in computer board
+# hide 5 ships inside computer board
     def make_ships(self):
         for i in range(5):
             self.x_row, self.y_column = random.randint(0,6), random.randint(0,6)
@@ -41,7 +41,7 @@ class Ship:
             self.board[self.x_row][self.y_column] = 'p'
         return self.board
             
-# ask for the users input, and react if not within the board 
+# ask for the users input, and react if not within coordinates of the board 
     @staticmethod
     def get_user_input():
       try:

@@ -73,16 +73,16 @@ Its a challenging game for one player, a game of guessing and chance.
 * The user will always receive printed prompts stating whats going on, for example: (f"You got this many guesss {turns} left, Good Luck! " ) or ("Well done you managed to find all the ships!").
 
 
-## The function that stops you from selecting coordinates outside of the board game.
+## The function that stops the user from selecting coordinates outside of the board game.
 
-* I used a function called def get_user_input(self), and the the try, while in range method to read the users guesses and read if they are guessing a number inside the board.You will be prompted that you have not chosen a place on the board and asked to make another guess. 
+* I used a function called def get_user_input, and the try, while in range method to read the users guesses and read if they are guessing a number inside the board. The user will be prompted that they have not chosen a place on the board and asked to make another guess. 
 
 
 ## How many turns, and calculating amount of turns.
 
-* You have 12 chances to choose correctly, before the game ends.
+* You have 20 chances to choose correctly, before the game ends.
 
-* The while method is used in my rungame function, to keep track of how turns the user has taken. The users turns will not exceed 12.
+* The while method is used in my rungame function, to keep track of how turns the user has taken. The users turns will not exceed 20.
 
 * A prompt keeps the user informed of how many turns they have remaining.
 
@@ -101,7 +101,7 @@ Its a challenging game for one player, a game of guessing and chance.
 
 * If the user missed the ships, the user will see a prompt stating they have missed the ships.
 
-* I call the count_ships function in rungame function, to, as its sounds, count how many ships have been found. If they have all been found, you will get a prompt that you have found all ships. Otherwise, I use the 'else' method to calculate how many turns are left. 
+* I call the count_ships function in rungame function. If they have all been found, the user will get a prompt that they have found all ships. Otherwise, I use the 'else' method to calculate how many turns are left. 
 
 * You continue the game until your turns run out or win. The user will get a prompt is they find all ships and the game will end. Or they will get a prompt stating they didn't find the ships, when turns end.
 
@@ -114,6 +114,8 @@ Its a challenging game for one player, a game of guessing and chance.
 * A improvement could be to make it a two player game.
 
 * Another improvement could be to add letters to the top row to make the game more user friendly.
+
+* Add a function that gives the user the option of restarting the game.
 
 ## Solved Bugs & Testing
 
