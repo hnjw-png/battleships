@@ -2,7 +2,7 @@ import random
 from random import randint
 
 # hello message to player
-print("Welcome to Battleships, this is a one player game. You have 8 turns, and guesses must be between 1-8")
+print("Welcome to Battleships, this is a one player game. You have 8 turns, and guesses must be between 1-7")
 print("Enter your name:")
 x = input()
 print("Hello, lets play Battleships " + x)
@@ -72,8 +72,8 @@ def RunGame():
     computer_board = Board([[""] * 8 for i in range(7)])
     user_guess_board = Board([[""] * 8 for i in range(7)])
     Ship.make_ships(computer_board)
-    # begins 12 go's
-    turns = 12
+    # begins 20 go's
+    turns = 20
     while turns > 0:
         Board.print_board(user_guess_board)
         # what did the user choose?
@@ -97,7 +97,7 @@ def RunGame():
         else:
           turns -= 1
           # how many turns left?
-          print(f"You got this many guesss {turns} left, Good Luck! " )
+          print(f"You got {turns} guesses left, Good Luck! " )
           if turns == 0:
             print("Oh looks like you sunk all you can today, you are out of turns")
             Board.print_board(user_guess_board)
