@@ -11,14 +11,15 @@ Its a challenging game for one player, a game of guessing and chance.
 
 ## User Goals and stories
 
-* The user should be able to play a one player game, the user should be able to keep track of their own guesses and amount of turns. The game will continously give prompts after turns to tell the user how they are doing and what to do.
+* The user should be able to play a one player game, the user will be able to keep track of their own guesses and amount of turns. The game will continously give prompts after turns to tell the user how they are doing and what to do.
 
 * The board will appear again after each guess, it wil be updated with the users guesses. The board will be reappearing each time updated with all user guess each time, improves the user experience.
 
-* The user should be able to see if they hit or miss a ship.
+* The user will be able to see if they hit or miss a ship.
 
-* The user cannot enter a value higher than 7, and cannot answer with a letter.
+* The user cannot enter a value higher than 7, and cannot answer with a letter/or other character/or blank.
 
+* 20 rounds, to make the game fair and createa good user experience. As too little guesses or two many guesses too hard or too difficult.
 
 ## Responsiveness
 
