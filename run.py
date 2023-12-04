@@ -37,8 +37,9 @@ class Ship:
             self.board[self.x_row][self.y_column] = 'p'
         return self.board
             
-# ask for the users input, and react if not within the board    
-    def get_user_input(self):
+# ask for the users input, and react if not within the board 
+    @staticmethod
+    def get_user_input():
       try:
           x_row = int(input("Type in the Ship row number:")) - 1
           while x_row not in range(0, 7):  
@@ -53,7 +54,7 @@ class Ship:
           return x_row, y_column
       except ValueError:
           print("Invalid input. Please enter a valid row and column.")
-          return self.get_user_input
+          return Ship.get_user_input()
 
 
 
@@ -68,19 +69,19 @@ class Ship:
 
 
 def RunGame():
-    computer_board = Board([[""] * 12 for i in range(7)])
-    user_guess_board = Board([[""] * 12 for i in range(7)])
+    computer_board = Board([[""] * 8 for i in range(7)])
+    user_guess_board = Board([[""] * 8 for i in range(7)])
     Ship.make_ships(computer_board)
     # begins 12 go's
     turns = 12
     while turns > 0:
         Board.print_board(user_guess_board)
         # what did the user choose?
-        user_x_row, user_y_column = Ship.get_user_input(object)
+        user_x_row, user_y_column = Ship.get_user_input()
         # stop the player picking the same place twice
         while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board.board[user_x_row][user_y_column] == "p":
           print("You have already chosen this spot, please pick another")
-          user_x_row, user_y_column = Ship.get_user_input(object)
+          user_x_row, user_y_column = Ship.get_user_input()
           # is it a hit or miss?
         if computer_board.board[user_x_row][user_y_column] == "p" :
           print("You managed to find one of my ships, what a hit!")
