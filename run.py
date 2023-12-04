@@ -102,14 +102,7 @@ def RunGame():
             print("Oh looks like you sunk all you can today, you are out of turns")
             Board.print_board(user_guess_board)
             break
-          # will the user restart game?
-            while True:
-               game()
-               restart = input('do you want to restart Y/N?')
-               if restart == 'N' :
-                 break
-               elif restart == 'Y':
-                 continue
+            
 
 if __name__ == '__main__':
     RunGame()
