@@ -19,7 +19,7 @@ class Board:
 # create the battleship board, numbering columns and rows
 
     def print_board(self):
-        print("  " + " ".join(["1", "2", "3", "4", "5", "6", "7"]))
+        print("  " + " ".join([" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 "]))
         row_number = 1
         for row in self.board:
             print(f"{row_number} {' | '.join(row)}")
