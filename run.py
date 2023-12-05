@@ -79,7 +79,7 @@ def RunGame():
     user_guess_board = Board([[""] * 7 for i in range(7)])
     Ship.make_ships(computer_board)
 # begins 20 rounds
-    turns = 20
+    turns = 30
     while turns > 0:
         Board.print_board(user_guess_board)
 # what did the user choose?

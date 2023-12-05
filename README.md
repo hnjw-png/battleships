@@ -8,6 +8,7 @@ The game will consist of a instructions and then ask for the name of player. The
 The general rules of battleships apply, is to hit all battleships within a certain amount of turns, to win the game.
 There wil be 5 ships to find, and 12 turns to find them. The game will keep track on how many ships have been found. The game will automatically end if the player does not find all ships within 20 turns. Again there will be prompts throughout the game to keep the player on track.
 Its a challenging game for one player, a game of guessing and chance. 
+Link to game: https://battleshipsss-a4f5758cfa28.herokuapp.com/
 
 ## User Goals and stories
 
@@ -161,6 +162,8 @@ Its a challenging game for one player, a game of guessing and chance.
 * Press deploy branch manually.
 
 * It can also work to select deploy branch automatically, this will update everytime you commit you editted repository to github.
+
+* Link to deployed game : https://battleshipsss-a4f5758cfa28.herokuapp.com/
 
 ## Credits
 
