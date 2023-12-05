@@ -22,5 +22,8 @@
    },
    "files.autoSave": "off",
    "workbench.colorTheme": "Solarized Light",
-   "editor.defaultFormatter": "HookyQR.beautify"
+   "editor.defaultFormatter": "HookyQR.beautify",
+   "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter"
+   }
 }

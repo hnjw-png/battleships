@@ -2,7 +2,7 @@ import random
 from random import randint
 
 # hello message to player
-print("Welcome to Battleships, this is a one player game. You have 30 turns.")
+print("Welcome to Battleships, this is a one player game. You have 40 turns.")
 print( "Guesses must be between 1-7!")
 print(" p will appear for a hit ship.")
 print(" - will appear for a missed ship.")
@@ -78,8 +78,8 @@ def RunGame():
 # call the user board
     user_guess_board = Board([[""] * 7 for i in range(7)])
     Ship.make_ships(computer_board)
-# begins 20 rounds
-    turns = 30
+# begins 40 rounds
+    turns = 40
     while turns > 0:
         Board.print_board(user_guess_board)
 # what did the user choose?
