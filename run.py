@@ -37,9 +37,9 @@ class Ship:
     # hide 5 ships inside computer board
     def make_ships(self):
         for i in range(5):
-            self.x_row, self.y_column = random.randint(0, 6), random.randint(0, 6)
+            self.x_row = self.y_column = random.randint(0, 6)
             while self.board[self.x_row][self.y_column] == "p":
-                self.x_row, self.y_column = random.randint(0, 6), random.randint(0, 6)
+                self.x_row = self.y_column = random.randint(0, 6)
             self.board[self.x_row][self.y_column] = "p"
         return self.board
 
