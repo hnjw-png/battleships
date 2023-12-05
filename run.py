@@ -2,7 +2,7 @@ import random
 from random import randint
 
 # hello message to player
-print("Welcome to Battleships, this is a one player game. You have 20 turns.")
+print("Welcome to Battleships, this is a one player game. You have 30 turns.")
 print( "Guesses must be between 1-7!")
 print(" p will appear for a hit ship.")
 print(" - will appear for a missed ship.")
