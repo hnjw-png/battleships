@@ -6,7 +6,7 @@
 Here you will play a simple logical game of battleships, using python, and stored in a run.py. 
 The game will consist of a instructions and then ask for the name of player. There after there will be a board, with 7 rows and 7 columns. Thereafter the player will be asked to choose a row number and a column number.
 The general rules of battleships apply, is to hit all battleships within a certain amount of turns, to win the game.
-There wil be 5 ships to find, and 12 turns to find them. The game will keep track on how many ships have been found. The game will automatically end if the player does not find all ships within 20 turns. Again there will be prompts throughout the game to keep the player on track.
+There wil be 5 ships to find, and 40 turns to find them. The game will keep track on how many ships have been found. The game will automatically end if the player does not find all ships within 40 turns. Again there will be prompts throughout the game to keep the player on track.
 Its a challenging game for one player, a game of guessing and chance. 
 Link to game: https://battleshipsss-a4f5758cfa28.herokuapp.com/
 
@@ -23,7 +23,7 @@ Link to game: https://battleshipsss-a4f5758cfa28.herokuapp.com/
 * 20 rounds, to make the game fair and createa good user experience. As too little guesses or two many guesses too hard or too difficult.
 
 ## Responsiveness
-
+Game is responsive in all devices. 
 
 # Features and Data Models explained:
 
@@ -34,6 +34,7 @@ Link to game: https://battleshipsss-a4f5758cfa28.herokuapp.com/
 * Thereafter there will be a message asking for the players name, and the next message that will appear with be welcome to battleships + the name.
 
 * Then the board appears.
+![Skärmbild (352)](https://github.com/hnjw-png/battleships/assets/120515252/e46330b7-7fdd-4277-9be9-be76d0e4cde4)
 
 ## The Board
 
@@ -46,6 +47,7 @@ Link to game: https://battleshipsss-a4f5758cfa28.herokuapp.com/
 * I have hidden the ships in the hidden computer board , and the user has to find them on their visable board.
 
 * Here I have made rows and columns with numbering inline to 7. Inside the board is made up by these ' | ' to make up a visual board. 
+![Skärmbild (360)](https://github.com/hnjw-png/battleships/assets/120515252/b1de8b66-5777-4d3f-a713-549c57204e89)
 
 
 
@@ -57,18 +59,20 @@ Link to game: https://battleshipsss-a4f5758cfa28.herokuapp.com/
 
 * You will not be able to guess the same place twice, or guess somewhere that is outside of the radius of the board (1-7)
 
-* The game will automatically end after 8 turns, you will receive a message stating your ending game statement.
+* The game will automatically end after 40 turns, you will receive a message stating your ending game statement.
 
 * I created the def make_ships(self) function, to create the ships in the game, using i in range statement and random.randint to place 5 ships in random places in the board. Following this down in the rungame() function, I call the make_ships function, within a computer board, the user can only see their user board.
 
 * I created a function that counts how many ships have been found. Again I have utlised the self method, def_count_found_ships(self). The amount of found ships starts naturally on 0, its counted in this function. I have then called this function count_ships in my rungame() function, it keeps track of all the ships have been found or not.
 
 
+
 ## The guess row and column prompt
 
-* After each turn, there will be a automatic prompt to ask for your guess, you will have 20 chances to find all the ships.
+* After each turn, there will be a automatic prompt to ask for your guess, you will have 40 chances to find all the ships.
 
 * The user always will be asked by the prompt, to guess a row and then to guess a column.
+![Skärmbild (356)](https://github.com/hnjw-png/battleships/assets/120515252/0539ed30-8e28-43d6-b322-4d69ec1f7c37)
 
 * If you guess a letter or another key, you will get a prompt to guess again, due to your entry being invalid.
 
@@ -78,15 +82,17 @@ Link to game: https://battleshipsss-a4f5758cfa28.herokuapp.com/
 ## The function that stops the user from selecting coordinates outside of the board game.
 
 * I used a function called def get_user_input, and the try, while in range method to read the users guesses and read if they are guessing a number inside the board. The user will be prompted that they have not chosen a place on the board and asked to make another guess. 
+![Skärmbild (361)](https://github.com/hnjw-png/battleships/assets/120515252/3cac8e3f-c035-405a-b3d4-0ac574ce0edd)
 
 
 ## How many turns, and calculating amount of turns.
 
-* You have 20 chances to choose correctly, before the game ends.
+* You have 40 chances to choose correctly, before the game ends.
 
-* The while method is used in my rungame function, to keep track of how turns the user has taken. The users turns will not exceed 20.
+* The while method is used in my rungame function, to keep track of how turns the user has taken. The users turns will not exceed 40.
 
 * A prompt keeps the user informed of how many turns they have remaining.
+![Skärmbild (360)](https://github.com/hnjw-png/battleships/assets/120515252/f1da7970-c126-42c4-80a7-5d56a9f0f049)
 
 * If the user finds all the ships before the turns end the game will end, and you get a prompt that the user has found all ships.
 
@@ -110,6 +116,7 @@ Link to game: https://battleshipsss-a4f5758cfa28.herokuapp.com/
 ## No guessing the same place twice
 
 * In the rungame function, it will read if you have already guessed a place or not. It reads if the cooridinates are already in use or not, by reading if "-" or "p" are already there, due to a previous guess.
+![Skärmbild (358)](https://github.com/hnjw-png/battleships/assets/120515252/d788000c-7cb1-4461-a187-53732210edea)
 
 # Improvements
 
