@@ -25,6 +25,8 @@ Link to game: https://battleshipsss-a4f5758cfa28.herokuapp.com/
 ## Responsiveness
 Game is responsive in all devices. 
 
+![Skärmbild (370)](https://github.com/hnjw-png/battleships/assets/120515252/4897e4c1-0b45-4b30-bb0d-3ffa6ae91427)
+
 # Features and Data Models explained:
 
 ## Instructions and Hello prompt
@@ -34,6 +36,7 @@ Game is responsive in all devices.
 * Thereafter there will be a message asking for the players name, and the next message that will appear with be welcome to battleships + the name.
 
 * Then the board appears.
+  
 ![Skärmbild (352)](https://github.com/hnjw-png/battleships/assets/120515252/e46330b7-7fdd-4277-9be9-be76d0e4cde4)
 
 ## The Board
@@ -46,7 +49,8 @@ Game is responsive in all devices.
 
 * I have hidden the ships in the hidden computer board , and the user has to find them on their visable board.
 
-* Here I have made rows and columns with numbering inline to 7. Inside the board is made up by these ' | ' to make up a visual board. 
+* Here I have made rows and columns with numbering inline to 7. Inside the board is made up by these ' | ' to make up a visual board.
+  
 ![Skärmbild (360)](https://github.com/hnjw-png/battleships/assets/120515252/b1de8b66-5777-4d3f-a713-549c57204e89)
 
 
@@ -72,6 +76,7 @@ Game is responsive in all devices.
 * After each turn, there will be a automatic prompt to ask for your guess, you will have 40 chances to find all the ships.
 
 * The user always will be asked by the prompt, to guess a row and then to guess a column.
+  
 ![Skärmbild (356)](https://github.com/hnjw-png/battleships/assets/120515252/0539ed30-8e28-43d6-b322-4d69ec1f7c37)
 
 * If you guess a letter or another key, you will get a prompt to guess again, due to your entry being invalid.
@@ -82,7 +87,6 @@ Game is responsive in all devices.
 ## The function that stops the user from selecting coordinates outside of the board game.
 
 * I used a function called def get_user_input, and the try, while in range method to read the users guesses and read if they are guessing a number inside the board. The user will be prompted that they have not chosen a place on the board and asked to make another guess. 
-![Skärmbild (361)](https://github.com/hnjw-png/battleships/assets/120515252/3cac8e3f-c035-405a-b3d4-0ac574ce0edd)
 
 
 ## How many turns, and calculating amount of turns.
@@ -101,13 +105,19 @@ Game is responsive in all devices.
 
 * You will get a error message if you choose anything other than a number. This is using the except ValueError method.
 
+![Skärmbild (366)](https://github.com/hnjw-png/battleships/assets/120515252/90be80c6-bb65-455f-932d-16b8fa2c4586)
+
 ## Hit, miss.
 
 * In the Rungame function, I use 'if' statements to check if the user has hit or missed the ships.
 
-* If the user has hit a ship, the user will see a prompt, stating they have a hit a ship. 
+* If the user has hit a ship, the user will see a prompt, stating they have a hit a ship.
+  
+![Skärmbild (368)](https://github.com/hnjw-png/battleships/assets/120515252/613aebb0-b200-4013-9752-7a5277686ac0)
 
 * If the user missed the ships, the user will see a prompt stating they have missed the ships.
+  
+![Skärmbild (369)](https://github.com/hnjw-png/battleships/assets/120515252/e22324d3-c4e4-45cb-a4f6-52fc9b7b0cb8)
 
 * I call the count_ships function in rungame function. If they have all been found, the user will get a prompt that they have found all ships. Otherwise, I use the 'else' method to calculate how many turns are left. 
 
@@ -116,7 +126,8 @@ Game is responsive in all devices.
 ## No guessing the same place twice
 
 * In the rungame function, it will read if you have already guessed a place or not. It reads if the cooridinates are already in use or not, by reading if "-" or "p" are already there, due to a previous guess.
-![Skärmbild (358)](https://github.com/hnjw-png/battleships/assets/120515252/d788000c-7cb1-4461-a187-53732210edea)
+  
+![Skärmbild (367)](https://github.com/hnjw-png/battleships/assets/120515252/5d17fab8-e708-48d3-8f25-9d754a534f5b)
 
 # Improvements
 
@@ -130,9 +141,10 @@ Game is responsive in all devices.
 
 * Currently the board appears without problem in the console, the prompts works properly as well. It took a few tried to get the numbers to appear correctly on the board. But it is now fixed, though one improvement could be that the board doe not move to the right, when a p or - is added.
 
-* A thing while it wasn't a error, but it did effect the user experience was that I orginally had only 12 rounds before the game ended. But while testing, it seemed infair to have so few chances to find all 5 ships in a board of 49 possible locations. So I decided to make the user experience better and more fair, and changed it 20turns, this gives much betters odds.
+* A thing while it wasn't a error, but it did effect the user experience was that I orginally had only 12 rounds before the game ended. But while testing, it seemed infair to have so few chances to find all 5 ships in a board of 49 possible locations. So I decided to make the user experience better and more fair, and changed it 40turns, this gives much betters odds.
 
-* There was a error with reading the valueerror, if the user enters a letter the game throughs a error instead of a prompt that it was invalid and continuing. But I have now corrected this by adding a static method, now is any other character is used than 1-7...the user gets prompted to pick a valid number, and the game continues.
+
+* There was a error with reading the value error, if the user enters a letter the game throughs a error instead of a prompt that it was invalid and continuing. But I have now corrected this by adding a static method, now is any other character is used than 1-7...the user gets prompted to pick a valid number, and the game continues.
 
 * I have manually tested the game to see if each function works : 
 1. I have tested, if the user cannot guess the same guess twice, and that works and the user is prompted that they have guessed the same place twice, and then gets another turn.
